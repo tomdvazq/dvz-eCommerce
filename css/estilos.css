@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,200&display=swap");
 @font-face {
   font-family: IBM;
   src: url(../../assets/fonts/IBM/IBMPlexSans-Regular.ttf); }
@@ -21,29 +22,59 @@ body {
 
 .encabezado {
   grid-area: header;
-  background-color: #4A299C;
+  background-color: white;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  font-family: IBM;
-  font-weight: 200; }
-  .encabezado a img {
-    height: 80px;
-    width: 80px; }
-  .encabezado .nav-site, .encabezado .nav-user {
+  font-family: 'Roboto Flex', IBM, 'sens-serif';
+  font-weight: 200;
+  border-bottom: solid 1px black;
+  padding: 0px 60px; }
+  .encabezado .logo img {
+    height: 80px; }
+  .encabezado .nav-site ul {
     display: flex;
-    flex-direction: row; }
-    .encabezado .nav-site ul, .encabezado .nav-user ul {
-      display: flex;
-      flex-direction: row; }
-    .encabezado .nav-site li, .encabezado .nav-user li {
+    flex-direction: row;
+    margin: 15px 0px; }
+  .encabezado .nav-site li {
+    list-style-type: none;
+    padding: 0px 10px; }
+    .encabezado .nav-site li a {
+      text-decoration: none;
+      color: black;
+      font-size: 1.7rem;
+      padding: 25px 0px; }
+      .encabezado .nav-site li a:hover {
+        border-bottom: solid 4px #4A299C; }
+  .encabezado .nav-user ul {
+    display: flex;
+    flex-direction: row;
+    margin: 15px 0px; }
+    .encabezado .nav-user ul .register {
       list-style-type: none;
       padding: 0px 10px; }
-      .encabezado .nav-site li a, .encabezado .nav-user li a {
+      .encabezado .nav-user ul .register a {
         text-decoration: none;
+        background-color: #4A299C;
         color: white;
-        font-size: 1.6rem; }
+        padding: 5px;
+        font-size: 1.7rem;
+        border-radius: 5px; }
+    .encabezado .nav-user ul .login {
+      list-style-type: none; }
+      .encabezado .nav-user ul .login a {
+        text-decoration: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.7rem;
+        color: black; }
+        .encabezado .nav-user ul .login a i {
+          font-size: 1.7rem;
+          margin-right: 5px;
+          color: #4A299C; }
 
 .cuerpo {
   grid-area: main; }
