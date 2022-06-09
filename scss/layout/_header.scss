@@ -7,8 +7,9 @@
     align-items: center;
     font-family: 'Roboto Flex', IBM, 'sens-serif';
     font-weight: 200;
-    border-bottom: solid 1px black;
+    box-shadow: 0px 0px 5px 0px black;
     padding: 0px 60px;
+    z-index: 1;
 
     .logo {
         img {
@@ -31,7 +32,7 @@
                 text-decoration: none;
                 color: black;
                 font-size: 1.7rem;
-                padding: 25px 0px;
+                padding: 27px 0px;
                 &:hover{
                     border-bottom: solid 4px $principal;
                 }

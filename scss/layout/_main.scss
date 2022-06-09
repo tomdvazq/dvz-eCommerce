@@ -1,3 +1,46 @@
 .cuerpo{
     grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 600px repeat(3, 1fr);
+        .portada{
+            background: center url(../../assets/img/editor-main.jpg);
+            background-size: cover;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0px 20px;
+                .text{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: flex-start;
+                    h1{
+                        color: white;
+                        font-family: IBM;
+                        font-weight: Bold;
+                        font-size: 70px;
+                        span{
+                            font-family: IBM;
+                            display: block;
+                        }
+                    }
+                    p{
+                        @extend h1;
+                        font-size: 4rem;
+                        font-weight: 100;
+                    }
+                    a{
+                        @extend p;
+                        text-decoration: none;
+                        background: $principal;
+                        font-size: 2.4rem;
+                        padding: 20px;
+                        border-radius: 5px;
+                        border: solid 1px white;
+                    }
+                }
+        }
 }

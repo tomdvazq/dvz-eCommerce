@@ -6,13 +6,11 @@
 * {
   margin: 0;
   top: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  font-family: 'Roboto Flex', IBM, 'sens-serif'; }
 
 html {
   font-size: 62.5%; }
-
-body {
-  font-family: IBM; }
 
 .container {
   display: grid;
@@ -29,8 +27,9 @@ body {
   align-items: center;
   font-family: 'Roboto Flex', IBM, 'sens-serif';
   font-weight: 200;
-  border-bottom: solid 1px black;
-  padding: 0px 60px; }
+  box-shadow: 0px 0px 5px 0px black;
+  padding: 0px 60px;
+  z-index: 1; }
   .encabezado .logo img {
     height: 80px; }
   .encabezado .nav-site ul {
@@ -44,7 +43,7 @@ body {
       text-decoration: none;
       color: black;
       font-size: 1.7rem;
-      padding: 25px 0px; }
+      padding: 27px 0px; }
       .encabezado .nav-site li a:hover {
         border-bottom: solid 4px #4A299C; }
   .encabezado .nav-user ul {
@@ -77,7 +76,42 @@ body {
           color: #4A299C; }
 
 .cuerpo {
-  grid-area: main; }
+  grid-area: main;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 600px repeat(3, 1fr); }
+  .cuerpo .portada {
+    background: center url(../../assets/img/editor-main.jpg);
+    background-size: cover;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px; }
+    .cuerpo .portada .text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start; }
+      .cuerpo .portada .text h1, .cuerpo .portada .text p, .cuerpo .portada .text a {
+        color: white;
+        font-family: IBM;
+        font-weight: Bold;
+        font-size: 70px; }
+        .cuerpo .portada .text h1 span, .cuerpo .portada .text p span, .cuerpo .portada .text a span {
+          font-family: IBM;
+          display: block; }
+      .cuerpo .portada .text p, .cuerpo .portada .text a {
+        font-size: 4rem;
+        font-weight: 100; }
+      .cuerpo .portada .text a {
+        text-decoration: none;
+        background: #4A299C;
+        font-size: 2.4rem;
+        padding: 20px;
+        border-radius: 5px;
+        border: solid 1px white; }
 
 .pie {
   grid-area: footer; }
