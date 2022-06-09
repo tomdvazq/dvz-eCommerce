@@ -1,0 +1,52 @@
+@font-face {
+  font-family: IBM;
+  src: url(../../assets/fonts/IBM/IBMPlexSans-Regular.ttf); }
+
+* {
+  margin: 0;
+  top: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  font-family: IBM; }
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 80px 1fr 150px;
+  grid-template-areas: "header" "main" "footer"; }
+
+.encabezado {
+  grid-area: header;
+  background-color: #4A299C;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-family: IBM;
+  font-weight: 200; }
+  .encabezado a img {
+    height: 80px;
+    width: 80px; }
+  .encabezado .nav-site, .encabezado .nav-user {
+    display: flex;
+    flex-direction: row; }
+    .encabezado .nav-site ul, .encabezado .nav-user ul {
+      display: flex;
+      flex-direction: row; }
+    .encabezado .nav-site li, .encabezado .nav-user li {
+      list-style-type: none;
+      padding: 0px 10px; }
+      .encabezado .nav-site li a, .encabezado .nav-user li a {
+        text-decoration: none;
+        color: white;
+        font-size: 1.6rem; }
+
+.cuerpo {
+  grid-area: main; }
+
+.pie {
+  grid-area: footer; }
