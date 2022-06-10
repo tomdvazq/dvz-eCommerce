@@ -127,38 +127,103 @@
             .nav-mt {
                 display: flex;
                 flex-direction: column;
-                justify-content: space-evenly;
-                align-items: center;
-                position: fixed;
+                justify-content: flex-start;
+                align-items: flex-start;
+                position: absolute;
                 top: 80px;
                 bottom: 0;
                 left: 0;
-                background-color: white;
-                width: 100%;
-                clip-path: circle(0 at center);
+                background-color: rgba(0, 0, 0, .9);
+                width: 100vw;
+                height: 100vh;
+                clip-path: polygon(100% 0, 100% 0%, 100% 100%, 100% 100%);
                 transition: clip-path 1s ease-in-out;
 
                 .nav-mt_ul {
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
-                    align-items: center;
-
+                    align-items: flex-start;
                     li {
                         list-style-type: none;
                         padding: 15px 0px;
-                        a{
+                        border-bottom: 1px solid rgba(255, 255, 255, .3);
+
+                        a {
                             text-decoration: none;
-                            color: black;
+                            color: white;
+                            font-weight: bold;
                             font-size: 1.7rem;
                             padding: 27px 0px;
+                        }
+                    }
+                    .tag{
+                        color: rgba(255, 255, 255, 0.5);
+                        font-size: 1.5rem;
+                        font-weight: bold;
+                        border-bottom: none;
+                    }
+                }
+
+                .nav-mt_us {
+                    align-self: center;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 15px 0px;
+
+                    .register {
+                        list-style-type: none;
+                        margin: 0px 7.5px;
+                        a {
+                            text-decoration: none;
+                            background-color: $principal;
+                            border: solid 1px white;
+                            color: white;
+                            padding: 5px 100px;
+                            font-size: 4rem;
+                            border-radius: 5px;
+                        }
+                    }
+
+                    .login {
+                        list-style-type: none;
+                        margin: 0px 7.5px;
+                        a {
+                            text-decoration: none;
+                            background-color: transparent;
+                            border: solid 1px  white;
+                            color: white;
+                            padding: 5px 100px;
+                            font-size: 4rem;
+                            border-radius: 5px;
+                        }
+                    }
+                }
+
+                .nav-mt_rs{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: flex-start;
+                    p{
+                        color: rgba(255, 255, 255, 0.5);
+                        font-size: 1.5rem;
+                        font-weight: bold;
+                        padding: 15px 0px;
+                    }
+
+                    div{
+                        .social-logos{
+                            color: white;
                         }
                     }
                 }
             }
 
-            input:checked + .nav-mt{
-                clip-path: circle(100% at center);
+            input:checked+.nav-mt {
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
             }
         }
     }

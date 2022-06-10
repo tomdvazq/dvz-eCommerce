@@ -106,31 +106,80 @@ img {
         .encabezado .tablet-mobile_version .nav-mt {
           display: flex;
           flex-direction: column;
-          justify-content: space-evenly;
-          align-items: center;
-          position: fixed;
+          justify-content: flex-start;
+          align-items: flex-start;
+          position: absolute;
           top: 80px;
           bottom: 0;
           left: 0;
-          background-color: white;
-          width: 100%;
-          clip-path: circle(0 at center);
+          background-color: rgba(0, 0, 0, 0.9);
+          width: 100vw;
+          height: 100vh;
+          clip-path: polygon(100% 0, 100% 0%, 100% 100%, 100% 100%);
           transition: clip-path 1s ease-in-out; }
           .encabezado .tablet-mobile_version .nav-mt .nav-mt_ul {
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-items: center; }
+            align-items: flex-start; }
             .encabezado .tablet-mobile_version .nav-mt .nav-mt_ul li {
               list-style-type: none;
-              padding: 15px 0px; }
+              padding: 15px 0px;
+              border-bottom: 1px solid rgba(255, 255, 255, 0.3); }
               .encabezado .tablet-mobile_version .nav-mt .nav-mt_ul li a {
                 text-decoration: none;
-                color: black;
+                color: white;
+                font-weight: bold;
                 font-size: 1.7rem;
                 padding: 27px 0px; }
+            .encabezado .tablet-mobile_version .nav-mt .nav-mt_ul .tag {
+              color: rgba(255, 255, 255, 0.5);
+              font-size: 1.5rem;
+              font-weight: bold;
+              border-bottom: none; }
+          .encabezado .tablet-mobile_version .nav-mt .nav-mt_us {
+            align-self: center;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin: 15px 0px; }
+            .encabezado .tablet-mobile_version .nav-mt .nav-mt_us .register {
+              list-style-type: none;
+              margin: 0px 7.5px; }
+              .encabezado .tablet-mobile_version .nav-mt .nav-mt_us .register a {
+                text-decoration: none;
+                background-color: #4A299C;
+                border: solid 1px white;
+                color: white;
+                padding: 5px 100px;
+                font-size: 4rem;
+                border-radius: 5px; }
+            .encabezado .tablet-mobile_version .nav-mt .nav-mt_us .login {
+              list-style-type: none;
+              margin: 0px 7.5px; }
+              .encabezado .tablet-mobile_version .nav-mt .nav-mt_us .login a {
+                text-decoration: none;
+                background-color: transparent;
+                border: solid 1px  white;
+                color: white;
+                padding: 5px 100px;
+                font-size: 4rem;
+                border-radius: 5px; }
+          .encabezado .tablet-mobile_version .nav-mt .nav-mt_rs {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start; }
+            .encabezado .tablet-mobile_version .nav-mt .nav-mt_rs p, .encabezado .tablet-mobile_version .nav-mt .nav-mt_rs .cuerpo .portada .text a, .cuerpo .portada .text .encabezado .tablet-mobile_version .nav-mt .nav-mt_rs a {
+              color: rgba(255, 255, 255, 0.5);
+              font-size: 1.5rem;
+              font-weight: bold;
+              padding: 15px 0px; }
+            .encabezado .tablet-mobile_version .nav-mt .nav-mt_rs div .social-logos {
+              color: white; }
         .encabezado .tablet-mobile_version input:checked + .nav-mt {
-          clip-path: circle(100% at center); } }
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); } }
 
 .cuerpo {
   grid-area: main;
