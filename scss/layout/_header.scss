@@ -144,79 +144,43 @@
                     flex-direction: column;
                     justify-content: center;
                     align-items: flex-start;
+                    margin: 20px 12px;
+
+                    .tag {
+                        color: rgba(255, 255, 255, 0.5);
+                        font-size: 1.5rem;
+                        font-weight: bold;
+                    }
+
                     li {
                         list-style-type: none;
-                        padding: 15px 0px;
-                        border-bottom: 1px solid rgba(255, 255, 255, .3);
-
+                        padding: 20px 0px;
                         a {
                             text-decoration: none;
                             color: white;
                             font-weight: bold;
                             font-size: 1.7rem;
-                            padding: 27px 0px;
-                        }
-                    }
-                    .tag{
-                        color: rgba(255, 255, 255, 0.5);
-                        font-size: 1.5rem;
-                        font-weight: bold;
-                        border-bottom: none;
-                    }
-                }
-
-                .nav-mt_us {
-                    align-self: center;
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: center;
-                    align-items: center;
-                    margin: 15px 0px;
-
-                    .register {
-                        list-style-type: none;
-                        margin: 0px 7.5px;
-                        a {
-                            text-decoration: none;
-                            background-color: $principal;
-                            border: solid 1px white;
-                            color: white;
-                            padding: 5px 100px;
-                            font-size: 4rem;
-                            border-radius: 5px;
-                        }
-                    }
-
-                    .login {
-                        list-style-type: none;
-                        margin: 0px 7.5px;
-                        a {
-                            text-decoration: none;
-                            background-color: transparent;
-                            border: solid 1px  white;
-                            color: white;
-                            padding: 5px 100px;
-                            font-size: 4rem;
-                            border-radius: 5px;
                         }
                     }
                 }
 
-                .nav-mt_rs{
+                .nav-mt_rs {
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
                     align-items: flex-start;
-                    p{
+                    margin: 0px 12px;
+
+                    p {
                         color: rgba(255, 255, 255, 0.5);
                         font-size: 1.5rem;
                         font-weight: bold;
-                        padding: 15px 0px;
                     }
 
-                    div{
-                        .social-logos{
+                    div {
+                        .social-logos {
                             color: white;
+                            font-size: 30px;
                         }
                     }
                 }
