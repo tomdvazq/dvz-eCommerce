@@ -1,6 +1,7 @@
 .encabezado {
+    grid-area: header;
+
     .desktop-version {
-        grid-area: header;
         background-color: white;
         display: flex;
         flex-direction: row;
@@ -11,6 +12,10 @@
         box-shadow: 0px 0px 5px 0px black;
         padding: 0px 60px;
         z-index: 1;
+
+        @include mQuerie(m) {
+            display: none;
+        }
 
         .logo {
             img {
@@ -82,6 +87,78 @@
                     }
                 }
 
+            }
+        }
+    }
+
+    .tablet-mobile_version {
+        display: none;
+
+        @include mQuerie(m) {
+            background-color: white;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            font-family: 'Roboto Flex', IBM, 'sens-serif';
+            font-weight: 200;
+            box-shadow: 0px 0px 5px 0px black;
+            padding: 0px 60px;
+            z-index: 1;
+
+            .logo {
+                img {
+                    height: 80px;
+                }
+            }
+
+            label {
+                i {
+                    color: $principal;
+                    font-size: 6rem;
+                    cursor: pointer;
+                }
+            }
+
+            input {
+                display: none;
+            }
+
+            .nav-mt {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+                position: fixed;
+                top: 80px;
+                bottom: 0;
+                left: 0;
+                background-color: white;
+                width: 100%;
+                clip-path: circle(0 at center);
+                transition: clip-path 1s ease-in-out;
+
+                .nav-mt_ul {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    li {
+                        list-style-type: none;
+                        padding: 15px 0px;
+                        a{
+                            text-decoration: none;
+                            color: black;
+                            font-size: 1.7rem;
+                            padding: 27px 0px;
+                        }
+                    }
+                }
+            }
+
+            input:checked + .nav-mt{
+                clip-path: circle(100% at center);
             }
         }
     }
