@@ -3,6 +3,9 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 600px repeat(3, 1fr);
+    @include mQuerie(m){
+        grid-template-rows: 900px repeat(3, 1fr);
+    }
         .portada{
             background: center url(../../assets/img/editor-main.jpg);
             background-size: cover;
@@ -12,25 +15,47 @@
             justify-content: space-between;
             align-items: center;
             padding: 0px 20px;
+            @include mQuerie(m){
+                flex-direction: column;
+                justify-content: center;
+            }
                 .text{
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
                     align-items: flex-start;
+                    @include mQuerie(m){
+                        align-items: center;
+                    }
                     h1{
                         color: white;
                         font-family: IBM;
                         font-weight: Bold;
-                        font-size: 70px;
+                        font-size: 6rem;
+                        @include mQuerie(xl){
+                            font-size: 5rem;
+                        }
+                        @include mQuerie(l){
+                            font-size: 4rem;
+                        }
                         span{
                             font-family: IBM;
                             display: block;
+                            @include mQuerie(m){
+                                text-align: center;
+                            }
                         }
                     }
                     p{
                         @extend h1;
-                        font-size: 4rem;
+                        font-size: 3.5rem;
                         font-weight: 100;
+                        @include mQuerie(xl){
+                            font-size: 3rem;
+                        }
+                        @include mQuerie(l){
+                            font-size: 2.5rem;
+                        }
                     }
                     a{
                         @extend p;
@@ -40,6 +65,31 @@
                         padding: 20px;
                         border-radius: 5px;
                         border: solid 1px white;
+                        @include mQuerie(xl){
+                            font-size: 1.8rem;
+                        }
+                        @include mQuerie(l){
+                            font-size: 1.5rem;
+                        }
+                        @include mQuerie(m){
+                            margin: 15px 0px;
+                        }
+                    }
+                }
+                .img{
+                    img{
+                        width: 700px;
+                        height: 500px;
+                        @include mQuerie(xl){
+                            width: 600px;
+                            height: 400px;
+                        }
+                        @include mQuerie(l){
+                            width: 500px;
+                        }
+                        @include mQuerie(m){
+                            height: 400px;
+                        }
                     }
                 }
         }

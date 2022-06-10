@@ -1,82 +1,88 @@
 .encabezado {
-    grid-area: header;
-    background-color: white;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    font-family: 'Roboto Flex', IBM, 'sens-serif';
-    font-weight: 200;
-    box-shadow: 0px 0px 5px 0px black;
-    padding: 0px 60px;
-    z-index: 1;
+    .desktop-version {
+        grid-area: header;
+        background-color: white;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        font-family: 'Roboto Flex', IBM, 'sens-serif';
+        font-weight: 200;
+        box-shadow: 0px 0px 5px 0px black;
+        padding: 0px 60px;
+        z-index: 1;
 
-    .logo {
-        img {
-            height: 80px;
-        }
-    }
-
-    .nav-site {
-        ul {
-            display: flex;
-            flex-direction: row;
-            margin: 15px 0px;
-        }
-
-        li {
-            list-style-type: none;
-            padding: 0px 10px;
-
-            a {
-                text-decoration: none;
-                color: black;
-                font-size: 1.7rem;
-                padding: 27px 0px;
-                &:hover{
-                    border-bottom: solid 4px $principal;
-                }
+        .logo {
+            img {
+                height: 80px;
             }
         }
-    }
 
-    .nav-user {
-        ul {
-            display: flex;
-            flex-direction: row;
-            margin: 15px 0px;
-            .register {
+        .nav-site {
+            ul {
+                display: flex;
+                flex-direction: row;
+                margin: 15px 0px;
+            }
+
+            li {
                 list-style-type: none;
                 padding: 0px 10px;
-                a {
-                    text-decoration: none;
-                    background-color: $principal;
-                    color: white;
-                    padding: 5px;
-                    font-size: 1.7rem;
-                    border-radius: 5px;
-                }
-            }
 
-            .login {
-                list-style-type: none;
                 a {
                     text-decoration: none;
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: center;
-                    align-items: center;
-                    font-size: 1.7rem;
                     color: black;
+                    font-size: 1.7rem;
+                    padding: 27px 0px;
 
-                    i {
-                        font-size: 1.7rem;
-                        margin-right: 5px;
-                        color: $principal;
+                    &:hover {
+                        border-bottom: solid 4px $principal;
                     }
                 }
             }
+        }
 
+        .nav-user {
+            ul {
+                display: flex;
+                flex-direction: row;
+                margin: 15px 0px;
+
+                .register {
+                    list-style-type: none;
+                    padding: 0px 10px;
+
+                    a {
+                        text-decoration: none;
+                        background-color: $principal;
+                        color: white;
+                        padding: 5px;
+                        font-size: 1.7rem;
+                        border-radius: 5px;
+                    }
+                }
+
+                .login {
+                    list-style-type: none;
+
+                    a {
+                        text-decoration: none;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: 1.7rem;
+                        color: black;
+
+                        i {
+                            font-size: 1.7rem;
+                            margin-right: 5px;
+                            color: $principal;
+                        }
+                    }
+                }
+
+            }
         }
     }
 }

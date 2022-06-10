@@ -12,13 +12,16 @@
 html {
   font-size: 62.5%; }
 
+img {
+  max-width: 100%; }
+
 .container {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 80px 1fr 150px;
   grid-template-areas: "header" "main" "footer"; }
 
-.encabezado {
+.encabezado .desktop-version {
   grid-area: header;
   background-color: white;
   display: flex;
@@ -30,39 +33,39 @@ html {
   box-shadow: 0px 0px 5px 0px black;
   padding: 0px 60px;
   z-index: 1; }
-  .encabezado .logo img {
+  .encabezado .desktop-version .logo img {
     height: 80px; }
-  .encabezado .nav-site ul {
+  .encabezado .desktop-version .nav-site ul {
     display: flex;
     flex-direction: row;
     margin: 15px 0px; }
-  .encabezado .nav-site li {
+  .encabezado .desktop-version .nav-site li {
     list-style-type: none;
     padding: 0px 10px; }
-    .encabezado .nav-site li a {
+    .encabezado .desktop-version .nav-site li a {
       text-decoration: none;
       color: black;
       font-size: 1.7rem;
       padding: 27px 0px; }
-      .encabezado .nav-site li a:hover {
+      .encabezado .desktop-version .nav-site li a:hover {
         border-bottom: solid 4px #4A299C; }
-  .encabezado .nav-user ul {
+  .encabezado .desktop-version .nav-user ul {
     display: flex;
     flex-direction: row;
     margin: 15px 0px; }
-    .encabezado .nav-user ul .register {
+    .encabezado .desktop-version .nav-user ul .register {
       list-style-type: none;
       padding: 0px 10px; }
-      .encabezado .nav-user ul .register a {
+      .encabezado .desktop-version .nav-user ul .register a {
         text-decoration: none;
         background-color: #4A299C;
         color: white;
         padding: 5px;
         font-size: 1.7rem;
         border-radius: 5px; }
-    .encabezado .nav-user ul .login {
+    .encabezado .desktop-version .nav-user ul .login {
       list-style-type: none; }
-      .encabezado .nav-user ul .login a {
+      .encabezado .desktop-version .nav-user ul .login a {
         text-decoration: none;
         display: flex;
         flex-direction: row;
@@ -70,7 +73,7 @@ html {
         align-items: center;
         font-size: 1.7rem;
         color: black; }
-        .encabezado .nav-user ul .login a i {
+        .encabezado .desktop-version .nav-user ul .login a i {
           font-size: 1.7rem;
           margin-right: 5px;
           color: #4A299C; }
@@ -80,6 +83,9 @@ html {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 600px repeat(3, 1fr); }
+  @media (max-width: 1030px) {
+    .cuerpo {
+      grid-template-rows: 900px repeat(3, 1fr); } }
   .cuerpo .portada {
     background: center url(../../assets/img/editor-main.jpg);
     background-size: cover;
@@ -89,22 +95,44 @@ html {
     justify-content: space-between;
     align-items: center;
     padding: 0px 20px; }
+    @media (max-width: 1030px) {
+      .cuerpo .portada {
+        flex-direction: column;
+        justify-content: center; } }
     .cuerpo .portada .text {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: flex-start; }
+      @media (max-width: 1030px) {
+        .cuerpo .portada .text {
+          align-items: center; } }
       .cuerpo .portada .text h1, .cuerpo .portada .text p, .cuerpo .portada .text a {
         color: white;
         font-family: IBM;
         font-weight: Bold;
-        font-size: 70px; }
+        font-size: 6rem; }
+        @media (max-width: 1470px) {
+          .cuerpo .portada .text h1, .cuerpo .portada .text p, .cuerpo .portada .text a {
+            font-size: 5rem; } }
+        @media (max-width: 1250px) {
+          .cuerpo .portada .text h1, .cuerpo .portada .text p, .cuerpo .portada .text a {
+            font-size: 4rem; } }
         .cuerpo .portada .text h1 span, .cuerpo .portada .text p span, .cuerpo .portada .text a span {
           font-family: IBM;
           display: block; }
+          @media (max-width: 1030px) {
+            .cuerpo .portada .text h1 span, .cuerpo .portada .text p span, .cuerpo .portada .text a span {
+              text-align: center; } }
       .cuerpo .portada .text p, .cuerpo .portada .text a {
-        font-size: 4rem;
+        font-size: 3.5rem;
         font-weight: 100; }
+        @media (max-width: 1470px) {
+          .cuerpo .portada .text p, .cuerpo .portada .text a {
+            font-size: 3rem; } }
+        @media (max-width: 1250px) {
+          .cuerpo .portada .text p, .cuerpo .portada .text a {
+            font-size: 2.5rem; } }
       .cuerpo .portada .text a {
         text-decoration: none;
         background: #4A299C;
@@ -112,6 +140,28 @@ html {
         padding: 20px;
         border-radius: 5px;
         border: solid 1px white; }
+        @media (max-width: 1470px) {
+          .cuerpo .portada .text a {
+            font-size: 1.8rem; } }
+        @media (max-width: 1250px) {
+          .cuerpo .portada .text a {
+            font-size: 1.5rem; } }
+        @media (max-width: 1030px) {
+          .cuerpo .portada .text a {
+            margin: 15px 0px; } }
+    .cuerpo .portada .img img {
+      width: 700px;
+      height: 500px; }
+      @media (max-width: 1470px) {
+        .cuerpo .portada .img img {
+          width: 600px;
+          height: 400px; } }
+      @media (max-width: 1250px) {
+        .cuerpo .portada .img img {
+          width: 500px; } }
+      @media (max-width: 1030px) {
+        .cuerpo .portada .img img {
+          height: 400px; } }
 
 .pie {
   grid-area: footer; }

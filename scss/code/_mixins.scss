@@ -1,0 +1,17 @@
+// Media Querie // 
+
+@mixin mQuerie($size){
+    @if $size==xl{
+        @media (max-width: 1470px){
+            @content ;
+        }
+    } @else if $size==l{
+        @media (max-width: 1250px){
+            @content;
+        }
+    } @else if $size==m{
+        @media (max-width: 1030px){
+            @content;
+        }
+    }
+}
