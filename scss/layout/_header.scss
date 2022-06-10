@@ -138,18 +138,47 @@
                 height: 100vh;
                 clip-path: polygon(100% 0, 100% 0%, 100% 100%, 100% 100%);
                 transition: clip-path 1s ease-in-out;
+                padding: 25px;
+
+                .nav-mt_user{
+                    align-self: center;
+                    padding-bottom: 40px;
+                    .user-r{
+                        font-family: 'Roboto Flex', IBM, 'sens-serif';
+                        text-decoration: none;
+                        color: black;
+                        font-size: 24px;
+                        padding: 5px 100px;
+                        background-color: white;
+                        border-radius: 5px;
+                        border: solid 1px black;
+                        margin: 0px 10px;
+                    }
+                    .user-l{
+                        font-family: 'Roboto Flex', IBM, 'sens-serif';
+                        text-decoration: none;
+                        color: white;
+                        font-size: 24px;
+                        padding: 5px 100px;
+                        background-color: none;
+                        border-radius: 5px;
+                        border: solid 1px white;
+                        margin: 0px 10px;
+                    }
+                }
 
                 .nav-mt_ul {
                     display: flex;
                     flex-direction: column;
-                    justify-content: center;
+                    justify-content: flex-start;
                     align-items: flex-start;
-                    margin: 20px 12px;
+                    margin: 0;
 
                     .tag {
                         color: rgba(255, 255, 255, 0.5);
                         font-size: 1.5rem;
                         font-weight: bold;
+                        border-bottom: solid 1px white;
                     }
 
                     li {
@@ -167,20 +196,23 @@
                 .nav-mt_rs {
                     display: flex;
                     flex-direction: column;
-                    justify-content: center;
+                    justify-content: flex-start;
                     align-items: flex-start;
-                    margin: 0px 12px;
+                    margin: 20px 0px;
 
                     p {
                         color: rgba(255, 255, 255, 0.5);
                         font-size: 1.5rem;
                         font-weight: bold;
+                        border-bottom: solid 1px white;
                     }
 
                     div {
                         .social-logos {
                             color: white;
                             font-size: 30px;
+                            position: relative;
+                            right: 7px;
                         }
                     }
                 }
