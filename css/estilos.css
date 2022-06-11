@@ -15,72 +15,79 @@ html {
 img {
   max-width: 100%; }
 
+a {
+  text-decoration: none; }
+
+li {
+  list-style: none; }
+
 .container {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 80px 1fr 150px;
+  grid-template-rows: 180px 1fr 150px;
   grid-template-areas: "header" "main" "footer"; }
 
 .encabezado {
   grid-area: header; }
-  .encabezado .desktop-version {
-    background-color: white;
+  .encabezado .desktop-version nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    font-family: 'Roboto Flex', IBM, 'sens-serif';
-    font-weight: 200;
-    box-shadow: 0px 0px 5px 0px black;
-    padding: 0px 60px;
-    z-index: 1; }
-    @media (max-width: 1030px) {
-      .encabezado .desktop-version {
-        display: none; } }
-    .encabezado .desktop-version .logo img {
+    margin: 0 auto;
+    z-index: 999;
+    font-size: 1.7rem;
+    padding: 0px 40px; }
+    .encabezado .desktop-version nav .logo img {
       height: 80px; }
-    .encabezado .desktop-version .nav-site ul {
-      display: flex;
-      flex-direction: row;
-      margin: 15px 0px; }
-    .encabezado .desktop-version .nav-site li {
-      list-style-type: none;
-      padding: 0px 10px; }
-      .encabezado .desktop-version .nav-site li a {
-        text-decoration: none;
-        color: black;
-        font-size: 1.7rem;
-        padding: 27px 0px; }
-        .encabezado .desktop-version .nav-site li a:hover {
-          border-bottom: solid 4px #4A299C; }
-    .encabezado .desktop-version .nav-user ul {
-      display: flex;
-      flex-direction: row;
-      margin: 15px 0px; }
-      .encabezado .desktop-version .nav-user ul .register {
-        list-style-type: none;
-        padding: 0px 10px; }
-        .encabezado .desktop-version .nav-user ul .register a {
-          text-decoration: none;
-          background-color: #4A299C;
-          color: white;
-          padding: 5px;
-          font-size: 1.7rem;
-          border-radius: 5px; }
-      .encabezado .desktop-version .nav-user ul .login {
-        list-style-type: none; }
-        .encabezado .desktop-version .nav-user ul .login a {
-          text-decoration: none;
+    .encabezado .desktop-version nav .toggle-menu {
+      display: none; }
+    .encabezado .desktop-version nav .nav-list {
+      display: flex; }
+      .encabezado .desktop-version nav .nav-list .close-menu {
+        display: none; }
+      .encabezado .desktop-version nav .nav-list .mega-menu {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        border-radius: 0px 0px 20px 20px;
+        box-shadow: 0 23px 23px -21px rgba(0, 0, 0, 0.25);
+        z-index: -99; }
+        .encabezado .desktop-version nav .nav-list .mega-menu .content {
           display: flex;
-          flex-direction: row;
-          justify-content: center;
-          align-items: center;
-          font-size: 1.7rem;
-          color: black; }
-          .encabezado .desktop-version .nav-user ul .login a i {
-            font-size: 1.7rem;
-            margin-right: 5px;
+          flex-direction: column;
+          padding: 1rem; }
+          .encabezado .desktop-version nav .nav-list .mega-menu .content .mega-menu_item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem; }
+            .encabezado .desktop-version nav .nav-list .mega-menu .content .mega-menu_item .megamenu-icon {
+              height: 32px;
+              width: 32px;
+              border-radius: 50%;
+              text-align: center;
+              background-color: #efeef1;
+              margin-right: 0.5rem; }
+          .encabezado .desktop-version nav .nav-list .mega-menu .content .header-megamenu {
+            font-weight: bolder;
+            margin-bottom: 1rem; }
+      .encabezado .desktop-version nav .nav-list .nav-item {
+        list-style: none;
+        margin: 0 15px;
+        padding: 14px 0; }
+        .encabezado .desktop-version nav .nav-list .nav-item .nav-link {
+          text-decoration: none;
+          color: black;
+          font-weight: bolder; }
+          .encabezado .desktop-version nav .nav-list .nav-item .nav-link:hover {
             color: #4A299C; }
+        .encabezado .desktop-version nav .nav-list .nav-item .dropdown-link {
+          display: flex;
+          align-items: center; }
   .encabezado .tablet-mobile_version {
     display: none; }
     @media (max-width: 1030px) {
