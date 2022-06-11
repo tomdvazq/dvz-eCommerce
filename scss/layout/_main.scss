@@ -80,6 +80,7 @@
                     img{
                         width: 700px;
                         height: 500px;
+                        opacity: .5;
                         @include mQuerie(xl){
                             width: 600px;
                             height: 400px;

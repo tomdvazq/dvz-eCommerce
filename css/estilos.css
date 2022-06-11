@@ -252,7 +252,8 @@ img {
             margin: 15px 0px; } }
     .cuerpo .portada .img img {
       width: 700px;
-      height: 500px; }
+      height: 500px;
+      opacity: .5; }
       @media (max-width: 1470px) {
         .cuerpo .portada .img img {
           width: 600px;
