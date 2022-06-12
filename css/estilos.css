@@ -95,7 +95,9 @@ li {
         flex-direction: row;
         border-radius: 0px 0px 20px 20px;
         box-shadow: 0 23px 23px -21px rgba(0, 0, 0, 0.25);
-        z-index: 1; }
+        z-index: 99;
+        visibility: hidden;
+        opacity: 0; }
         @media (max-width: 1030px) {
           .encabezado .desktop-version nav .nav-list .mega-menu {
             justify-content: flex-start;
@@ -122,8 +124,7 @@ li {
               text-align: center;
               background-color: #efeef1;
               margin-right: 0.8rem;
-              margin-bottom: 1rem;
-              border: solid 2px #4A299C; }
+              margin-bottom: 1rem; }
               .encabezado .desktop-version nav .nav-list .mega-menu .content .mega-menu_item .megamenu-icon .filmora {
                 border-radius: 50%; }
           .encabezado .desktop-version nav .nav-list .mega-menu .content .header-megamenu {
@@ -139,9 +140,13 @@ li {
             font-size: 1.2rem;
             font-weight: 400; }
       .encabezado .desktop-version nav .nav-list .dropdown:hover + .mega-menu {
-        transition: all .3s ease;
+        transition: all .3 ease;
         visibility: visible;
         opacity: 1; }
+        @media (max-width: 1030px) {
+          .encabezado .desktop-version nav .nav-list .dropdown:hover + .mega-menu {
+            height: 40%;
+            -moz-height: 35%; } }
       .encabezado .desktop-version nav .nav-list .nav-item {
         list-style: none;
         margin: 0 15px;
@@ -158,6 +163,8 @@ li {
       .encabezado .desktop-version nav .nav-list .nav-item:hover .dropdown-icon {
         transform: rotate(180deg);
         transition: all .3s ease; }
+    .encabezado .desktop-version nav .show_menu {
+      left: 0; }
 
 .cuerpo {
   grid-area: main;

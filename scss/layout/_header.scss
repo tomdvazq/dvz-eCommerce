@@ -81,9 +81,9 @@
                     flex-direction: row;
                     border-radius: 0px 0px 20px 20px;
                     box-shadow: 0 23px 23px -21px rgba(0, 0, 0, .25);
-                    z-index: 1;
-                    // visibility: hidden;
-                    // opacity: 0;
+                    z-index: 99;
+                    visibility: hidden;
+                    opacity: 0;
                     @include mQuerie(m){
                         justify-content: flex-start;
                         flex-wrap: wrap;
@@ -112,7 +112,6 @@
                                     background-color: #efeef1;
                                     margin-right: 0.8rem;
                                     margin-bottom: 1rem;
-                                    border: solid 2px $principal;
                                         .filmora{
                                             border-radius: 50%;
                                         }
@@ -139,10 +138,16 @@
                     }
                 }
 
-                .dropdown:hover + .mega-menu{
-                    transition: all .3s ease;
-                    visibility: visible;
-                    opacity: 1;
+                .dropdown{
+                    &:hover + .mega-menu{
+                        transition: all .3 ease;
+                        visibility: visible;
+                        opacity: 1;
+                        @include mQuerie(m){
+                            height: 40%;
+                            -moz-height: 35%;
+                        }
+                    }
                 }
 
                 .nav-item {
@@ -170,8 +175,12 @@
                     transform: rotate(180deg);
                     transition: all .3s ease;
                 }
-
             }
+
+            .show_menu{
+                left: 0;
+            }
+            
         }
     }
 }
