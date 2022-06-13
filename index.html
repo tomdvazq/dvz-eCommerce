@@ -16,75 +16,52 @@
 
         <!-- Header -->
         <header class="encabezado">
-            <div class="desktop-version">
-                <nav>
-                    <div class="logo">
+            <div class="container">
+                <div class="row v-center">
+                    <div class="logo header-item">
                         <a href="index.html"><img src="assets/logos/dvz-color.png" alt="dvz-logo"></a>
                     </div>
-                    <div class="toggle-menu" id="toggle">
-                        <i class='bx bx-grid-alt'></i>
-                    </div>
-                    <ul class="nav-list" id="nav-mobile">
-                        <div class="close-menu" id="close-menu">
-                            <i class='bx bx-x' ></i>
-                        </div>
-
-                        <!-- Edicion de video-->
-                        <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-link">Edición de video <i class='bx bx-chevron-down dropdown-icon'></i></a></li>
-                        <div class="mega-menu">
-                            <ul class="content">
-                                <li class="mega-menu_item header-megamenu">Softwares</li>
-                                <li class="mega-menu_item">
-                                    <div class="megamenu-icon">
-                                        <img src="assets/iconos/after-effects.png" alt="after-effects">
-                                    </div>
-                                    <div class="menu-link_div">
-                                        <a href="#" class="menu-link">Adobe After Effects</a>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, ex.</p>
-                                    </div>
-                                </li>
-
-                                <li class="mega-menu_item">
-                                    <div class="megamenu-icon">
-                                        <img src="assets/iconos/premiere.png" alt="premiere">
-                                    </div>
-                                    <div class="menu-link_div">
-                                        <a href="#" class="menu-link">Adobe Premiere Pro</a>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, quas.</p>
+                    <div class="nav header-item">
+                        <nav class="menu">
+                            <ul class="nav-menu">
+                                <li class="nav-item item-father">
+                                    <a href="#" class="nav-link">Edición de video <i class='bx bx-chevron-down'></i></a>
+                                    <div class="sub-menu">
+                                        <ul class="sub-menu_ul">
+                                            <li class="sub-menu_item">
+                                                <img src="assets/iconos/after-effects.png" alt="after-effects">
+                                                <a href="#" class="sub-menu_link">Adobe After Effects</a>
+                                            </li>
+                                            <li class="sub-menu_item">
+                                                <img src="assets/iconos/premiere.png" alt="premiere-pro">
+                                                <a href="#" class="sub-menu_link">Adobe Premiere Pro</a>
+                                            </li>
+                                            <li class="sub-menu_item">
+                                                <img src="assets/iconos//davinci-resolve.png" alt="davinci-resolve">
+                                                <a href="#" class="sub-menu_link">Da Vinci Resolve</a>
+                                            </li>
+                                            <li class="sub-menu_item">
+                                                <img src="assets/iconos/filmora.png" alt="wondershare-filmora">
+                                                <a href="#" class="sub-menu_link">Wondershare Filmora</a>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </li>
-
-                                <li class="mega-menu_item">
-                                    <div class="megamenu-icon">
-                                        <img src="assets/iconos/davinci-resolve.png" alt="davinci-resolve">
-                                    </div>
-                                    <div class="menu-link_div">
-                                        <a href="#" class="menu-link">Da Vinci Resolve</a>
-                                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur, dolorum?</p>
-                                    </div>
-                                </li>
-
-                                <li class="mega-menu_item">
-                                    <div class="megamenu-icon">
-                                        <img src="assets/iconos/filmora.png" alt="filmora" class="filmora">
-                                    </div>
-                                    <div class="menu-link_div">
-                                        <a href="#" class="menu-link">Wondershare Filmora</a>
-                                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur, dolorum?</p>
-                                    </div>
-                                </li>
+                                <li class="nav-item"><a href="#" class="nav-link">Edición de audio <i class='bx bx-chevron-down'></i></a></li>
+                                <li class="nav-item"><a href="#" class="nav-link">Diseño Gráfico <i class='bx bx-chevron-down'></i></a></li>
+                                <li class="nav-item"><a href="#" class="nav-link">Desarrollo Web <i class='bx bx-chevron-down'></i></a></li>
                             </ul>
-                        </div>
-
-                        <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-link">Edición de audio <i class='bx bx-chevron-down dropdown-icon'></i></a></li>
-                        <li class="nav-item"><a href="#" class="nav-link dropdown-link">Diseño Gráfico <i class='bx bx-chevron-down dropdown-icon'></i></a></li>
-                        <li class="nav-item"><a href="#" class="nav-link dropdown-link">Desarrollo Web <i class='bx bx-chevron-down dropdown-icon'></i></a></li>
-                    </ul>
-                </nav>
+                        </nav>
+                    </div>
+                    <div class="header-item users">
+                        <i class='bx bx-cart'></i>
+                        <i class='bx bxs-user-circle'></i>
+                    </div>
+                </div>
             </div>
         </header>
         <!-- Main -->
-        <main class="cuerpo">
+        <main class="cuerpo" id="main">
             <section class="portada">
                 <div class="text">
                     <h1>Los recursos que necesitás <span>están a un solo clic</span></h1>
