@@ -15,47 +15,84 @@
     <div class="container">
 
         <!-- Header -->
-        <header class="encabezado">
+        <header class="encabezado header">
             <div class="container">
                 <div class="row v-center">
-                    <div class="logo header-item">
+                    <!-- Logotipo -->
+                    <div class="logo header-item item-left">
                         <a href="index.html"><img src="assets/logos/dvz-color.png" alt="dvz-logo"></a>
                     </div>
-                    <div class="nav header-item">
-                        <nav class="menu">
-                            <ul class="nav-menu">
-                                <li class="nav-item item-father">
+                    <!-- Menú -->
+                    <div class="nav header-item item-center">
+                        <div class="menu-overlay"></div> 
+                        <nav class="menu" id="menu">
+                            <div class="mobile-menu-head" id="mobile">
+                                <div class="go-back">
+                                    <i class='bx bx-left-arrow-alt'></i>
+                                </div>
+                                <div class="current-menu_title">
+                                </div>
+                                <div class="mobile-menu-close">
+                                    <i class='bx bx-x'></i>
+                                </div>
+                            </div>
+                            <ul class="menu-main">
+                                <li class="nav-item item-father menu-item-has-children">
                                     <a href="#" class="nav-link">Edición de video <i class='bx bx-chevron-down'></i></a>
-                                    <div class="sub-menu">
-                                        <ul class="sub-menu_ul">
-                                            <li class="sub-menu_item">
+                                    <div class="sub-menu mega-menu single-column-menu" id="subMenu">
+                                        <ul>
+                                            <li>
                                                 <img src="assets/iconos/after-effects.png" alt="after-effects">
-                                                <a href="#" class="sub-menu_link">Adobe After Effects</a>
+                                                <a href="#">Adobe After Effects</a>
                                             </li>
-                                            <li class="sub-menu_item">
+                                            <li>
                                                 <img src="assets/iconos/premiere.png" alt="premiere-pro">
-                                                <a href="#" class="sub-menu_link">Adobe Premiere Pro</a>
+                                                <a href="#">Adobe Premiere Pro</a>
                                             </li>
-                                            <li class="sub-menu_item">
+                                            <li>
                                                 <img src="assets/iconos//davinci-resolve.png" alt="davinci-resolve">
-                                                <a href="#" class="sub-menu_link">Da Vinci Resolve</a>
+                                                <a href="#">Da Vinci Resolve</a>
                                             </li>
-                                            <li class="sub-menu_item">
+                                            <li>
                                                 <img src="assets/iconos/filmora.png" alt="wondershare-filmora">
-                                                <a href="#" class="sub-menu_link">Wondershare Filmora</a>
+                                                <a href="#">Wondershare Filmora</a>
                                             </li>
                                         </ul>
                                     </div>
                                 </li>
-                                <li class="nav-item"><a href="#" class="nav-link">Edición de audio <i class='bx bx-chevron-down'></i></a></li>
-                                <li class="nav-item"><a href="#" class="nav-link">Diseño Gráfico <i class='bx bx-chevron-down'></i></a></li>
-                                <li class="nav-item"><a href="#" class="nav-link">Desarrollo Web <i class='bx bx-chevron-down'></i></a></li>
+                                <li class="nav-item item-father menu-item-has-children">
+                                    <a href="#" class="nav-link">Edición de video <i class='bx bx-chevron-down'></i></a>
+                                    <div class="sub-menu mega-menu single-column-menu" id="subMenu">
+                                        <ul>
+                                            <li>
+                                                <img src="assets/iconos/after-effects.png" alt="after-effects">
+                                                <a href="#">Adobe After Effects</a>
+                                            </li>
+                                            <li>
+                                                <img src="assets/iconos/premiere.png" alt="premiere-pro">
+                                                <a href="#">Adobe Premiere Pro</a>
+                                            </li>
+                                            <li>
+                                                <img src="assets/iconos//davinci-resolve.png" alt="davinci-resolve">
+                                                <a href="#">Da Vinci Resolve</a>
+                                            </li>
+                                            <li>
+                                                <img src="assets/iconos/filmora.png" alt="wondershare-filmora">
+                                                <a href="#">Wondershare Filmora</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
                             </ul>
                         </nav>
                     </div>
-                    <div class="header-item users">
+                    <!-- Usuarios -->
+                    <div class="users header-item item-right">
                         <i class='bx bx-cart'></i>
                         <i class='bx bxs-user-circle'></i>
+                        <div class="mobile-menu-trigger">
+                            <span></span>
+                        </div>
                     </div>
                 </div>
             </div>

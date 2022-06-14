@@ -1,9 +1,10 @@
 .encabezado {
     grid-area: header;
-    box-shadow: 2100px 21px 201px -21px black;
+    box-shadow: -2px 21px 201px -21px black;
     z-index: 99;
 
     .container {
+
         .row {
             display: flex;
             flex-wrap: wrap;
@@ -11,102 +12,387 @@
             padding: 0px 40px;
             box-shadow: 0px 14px 14px -21px black;
 
+
             .logo {
                 img {
                     height: 80px;
                 }
+
+                @include mQuerie(m) {
+                    flex: 0 0 auto;
+                }
             }
 
             .nav {
-                color: black;
+                @include mQuerie(m) {
+                    order: 3;
+                    flex: 0 0 100%;
+                    position: fixed;
+                    width: 32px;
+                    background-color: #ffffff;
+                    box-shadow: 0px 0px 15px #ccc;
+                    left: 0;
+                    top: 0;
+                    height: 100%;
+                    width: 350px;
+                }
 
-                .nav-menu {
-                    display: flex;
+                .menu-overlay {
+                    @include mQuerie(m) {
+                        position: fixed;
+                        background-color: rgba(0, 0, 0, 0.5);
+                        left: 0;
+                        top: 0;
+                        width: 100%;
+                        height: 100%;
+                        z-index: 1098;
+                        visibility: hidden;
+                        opacity: 0;
+                        transition: all 0.5s ease;
+                    }
 
-                    .nav-item {
+                    &.active {
+                        visibility: visible;
+                        opacity: 1;
+                    }
+                }
 
-                        .nav-link { /* Categorías */
-                            font-family: 'Roboto Flex', sans-serif;
-                            font-size: 1.7rem;
-                            font-weight: 600;
-                            padding: 0px 10px;
-                            color: black;
+                .menu {
+                    @include mQuerie(m) {
+                        position: fixed;
+                        width: 360px;
+                        background-color: #ffffff;
+                        left: 0;
+                        top: 0;
+                        height: 100%;
+                        transition: all 0.5s ease;
+                        z-index: 1100;
 
-                            i {
-                                font-size: 1.5rem;
-                            }
+                        &.active {
+                            transform: translate(0%);
+                        }
+                    }
 
-                            &:hover {
-                                color: $principal;
+                    .mobile-menu-head {
+                        display: none;
+
+                        @include mQuerie(m) {
+                            display: flex;
+                            height: 60px;
+                            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+                            justify-content: space-between;
+                            align-items: center;
+                            position: relative;
+                            z-index: 501;
+                            position: sticky;
+                            background-color: #ffffff;
+                            top: 0;
+
+                            &.active {
+                                .go-back {
+                                    display: block;
+                                }
                             }
                         }
 
-                        .sub-menu { /* Subcategorías */
-                            /* Caja contenedora del dropdown menú*/
-                            display: flex;
-                            flex-direction: row;
-                            justify-content: center;
-                            align-items: center;
-                            position: absolute;
-                            top: 80px;
-                            left: 0;
-                            z-index: 500;
-                            background-color: rgba(255, 255, 255, .7);
-                            box-sizing: -2px 20px 70px 25px rgba(0, 0, 0, .3);
-                            width: 100%;
-                            // opacity: 0;
-                            // visibility: hidden;
+                        .go-back {
+                            height: 60px;
+                            width: 60px;
+                            border-right: 1px solid rgba(0, 0, 0, 0.1);
+                            cursor: pointer;
+                            line-height: 60px;
+                            text-align: center;
+                            color: #000000;
+                            font-size: 16px;
+                            display: none;
 
-                            .sub-menu_ul {
-                                /* Disposición de elementos del dropdown menú */
-                                display: flex;
-                                flex-direction: row;
-                                justify-content: center;
-                                align-items: center;
+                            i {
+                                font-size: 50px;
+                                padding: 5px 0px;
+                            }
+                        }
+
+                        .current-menu_title {
+                            font-size: 400px;
+                            font-weight: 500;
+                            color: #000000;
+                        }
+
+                        .mobile-menu-close {
+                            height: 60px;
+                            width: 60px;
+                            border-left: 1px solid rgba(0, 0, 0, 0.1);
+                            cursor: pointer;
+                            line-height: 60px;
+                            text-align: center;
+                            color: #000000;
+
+                            i {
+                                font-size: 50px;
+                                padding: 5px 0px;
+                            }
+                        }
+                    }
+
+                    .menu-main {
+                        /* Categorías UL */
+                        display: flex;
+
+                        @include mQuerie(m) {
+                            height: 100%;
+                            overflow-x: hidden;
+                            overflow-y: auto;
+                            flex-direction: column;
+                        }
+
+                        .nav-item {
+                            /* Categorías LI */
+                            padding: 25px 0px;
+
+                            @include mQuerie(m) {
+                                line-height: 1;
+                                margin: 0;
+                                padding: 0;
+                                display: block;
                             }
 
-                            .sub-menu_item {
-                                /* Elementos individuales del dropdown menú*/
-                                align-self: flex-start;
+                            .nav-link {
+                                /* Categorías Anchor */
+                                font-family: 'Roboto Flex', sans-serif;
                                 font-size: 1.7rem;
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
-                                padding: 20px;
+                                font-weight: 600;
+                                padding: 0px 10px;
+                                color: black;
 
-                                .sub-menu_link {
-                                    font-size: 1.7rem;
-                                    font-weight: bold;
-                                    color: black;
-
-                                    &:hover {
-                                        color: $principal;
+                                &:hover {
+                                    i {
+                                        transition: .3s;
+                                        transform: rotate(180deg);
                                     }
                                 }
 
-                                img {
-                                    width: 32px;
-                                    height: 32px;
-                                    margin-right: 5px;
+                                i {
+                                    font-size: 1.5rem;
+
+                                    @include mQuerie(m) {
+                                        height: 50px;
+                                        line-height: 50px;
+                                    }
+                                }
+
+                                &:hover {
+                                    color: $principal;
+                                }
+
+                                @include mQuerie(m) {
+                                    position: relative;
+                                    left: -40px;
+                                    top: 0px;
+                                    line-height: 50px;
+                                    height: 50px;
+                                    width: 360px;
+                                    padding: 0px 10px;
+                                    display: block;
+                                    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+                                }
+
+                            }
+
+                            .sub-menu {
+                                /* Subcategorías DIV */
+                                /* Caja contenedora del dropdown menú*/
+                                position: absolute;
+                                z-index: 500;
+                                background-color: rgba(116, 116, 116, .7);
+                                box-shadow: -2px 2px 70px -25px rgba(0, 0, 0, 0.3);
+                                padding: 20px 30px;
+                                transition: all 0.5s ease;
+                                top: 80px;
+                                left: 0;
+                                right: 0;
+                                opacity: 0;
+                                visibility: hidden;
+                                @include mQuerie(m){
+                                    background-color: transparent;
+                                    visibility: visible;
+                                    opacity: 1;
+                                    position: absolute;
+                                    box-shadow: none;
+                                    margin: 0;
+                                    padding: 15px;
+                                    top: 85px;
+                                    left: -60px;
+                                    width: 100%;
+                                    height: 100%;
+                                    max-width: none;
+                                    min-width: auto;
+                                    display: block;
+                                    transform: translateX(0%);
+                                    overflow-y: auto;
+
+
+                                    &.active{
+                                        display: block;
+                                    }
+
+                                    @keyframes slideLeft {
+                                        0% {
+                                            opacity: 0;
+                                            transform: translateX(100%);
+                                        }
+        
+                                        100% {
+                                            opacity: 1;
+                                            transform: translateX(0%);
+                                        }
+                                    }
+        
+                                    @keyframes slideRight {
+                                        0% {
+                                            opacity: 1;
+                                            transform: translateX(0%);
+                                        }
+        
+                                        100% {
+                                            opacity: 0;
+                                            transform: translateX(100%);
+                                        }
+                                    }
+                                }
+
+                                ul {
+                                    /* Disposición de elementos del dropdown menú */
+                                    display: flex;
+                                    flex-direction: row;
+                                    justify-content: center;
+                                    align-items: center;
+                                    @include mQuerie(m){
+                                        flex-direction: column;
+                                    }
+                                }
+
+                                li {
+                                    /* Elementos individuales del dropdown menú*/
+                                    align-self: flex-start;
+                                    font-size: 1.7rem;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    padding: 20px;
+
+                                    a {
+                                        font-size: 1.5rem;
+                                        color: rgb(255, 255, 255);
+
+                                        @include mQuerie(m) {
+                                            color: black;
+                                        }
+
+                                        &:hover {
+                                            color: rgb(232, 204, 133);
+                                        }
+                                    }
+
+                                    img {
+                                        width: 32px;
+                                        height: 32px;
+                                        margin-right: 10px;
+                                        border-radius: 50%;
+                                    }
+
                                 }
 
                             }
 
                         }
 
+                        .item-father:hover {
+                            .sub-menu {
+                                visibility: visible;
+                                opacity: 1;
+                            }
+                        }
                     }
                 }
             }
 
             .users {
                 display: flex;
+                justify-content: center;
+                align-items: center;
+
+                @include mQuerie(m) {
+                    flex: 0 0 auto;
+                    align-items: center;
+                }
 
                 .bx-cart {
                     padding: 0px 15px;
                 }
 
+                .bx-menu {
+                    margin-left: 15px;
+                    display: none;
+
+                    @include mQuerie(m) {
+                        display: block;
+                        margin-left: 0;
+                    }
+                }
+
+                .bxs-user-circle {
+                    @include mQuerie(m) {
+                        display: none;
+                    }
+                }
+
+                .mobile-menu-trigger {
+                    display: flex;
+                    height: 30px;
+                    width: 30px;
+                    margin-left: 15px;
+                    cursor: pointer;
+                    align-items: center;
+                    justify-content: center;
+
+                    span {
+                        display: block;
+                        height: 2px;
+                        background-color: #333333;
+                        width: 24px;
+                        position: relative;
+
+                        &:before {
+                            content: '';
+                            position: absolute;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            background-color: #333333;
+                        }
+
+                        &:after {
+                            content: '';
+                            position: absolute;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            background-color: #333333;
+                        }
+
+                        &:before {
+                            top: -6px;
+                        }
+
+                        &:after {
+                            top: 6px;
+                        }
+                    }
+
+                }
+
                 i {
-                    font-size: 3rem;
+                    font-size: 3.5rem;
                     cursor: pointer;
 
                     &:hover {
