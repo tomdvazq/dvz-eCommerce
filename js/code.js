@@ -1,5 +1,5 @@
 const menu = document.getElementById("menu");
-const menuMain = document.querySelector(".menu-main");
+const menuMain = document.getElementById("menuMain");
 const goBack = document.querySelector(".go-back");
 const menuTrigger = document.querySelector(".mobile-menu-trigger");
 const closeMenu = document.querySelector(".mobile-menu-close");
@@ -38,7 +38,8 @@ function showSubMenu(hasChildren) {
     subMenu.classList.add("active");
     subMenu.style.animation = "slideLeft 0.5s ease forwards";
     const menuTitle = hasChildren.querySelector("i").parentNode.childNodes[0].textContent;
-    document.getElementsByClassName("current-menu-title").innerHTML = menuTitle;
+    menu.getElementsByClassName(".current-menu-title").innerHTML = menuTitle;
+    console.log(menuTitle)
     menu.querySelector(".mobile-menu-head").classList.add("active");
 }
 
@@ -52,7 +53,7 @@ function hideSubMenu() {
 }
 
 window.onresize = function () {
-    if (this.innerWidth > 1025) {
+    if (this.innerWidth > 1022) {
         if (menu.classList.contains("active")) {
             toggleMenu();
         }

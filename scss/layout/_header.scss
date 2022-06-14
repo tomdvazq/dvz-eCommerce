@@ -83,8 +83,8 @@
                             justify-content: space-between;
                             align-items: center;
                             position: relative;
-                            z-index: 501;
-                            position: sticky;
+                            z-index: 9999;
+                            position: static;
                             background-color: #ffffff;
                             top: 0;
 
@@ -113,7 +113,7 @@
                         }
 
                         .current-menu_title {
-                            font-size: 400px;
+                            font-size: 20px;
                             font-weight: 500;
                             color: #000000;
                         }
@@ -175,8 +175,13 @@
                                     font-size: 1.5rem;
 
                                     @include mQuerie(m) {
+                                        position: absolute;
+                                        right: 0;
+                                        padding: 0px 14.5px;
+                                        border-left: solid 1px rgba(0, 0, 0, .1);
                                         height: 50px;
                                         line-height: 50px;
+                                        font-size: 3rem;
                                     }
                                 }
 
@@ -191,9 +196,10 @@
                                     line-height: 50px;
                                     height: 50px;
                                     width: 360px;
-                                    padding: 0px 10px;
+                                    padding: 0 50px 0 15px;
                                     display: block;
                                     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+                                    
                                 }
 
                             }
@@ -213,20 +219,17 @@
                                 opacity: 0;
                                 visibility: hidden;
                                 @include mQuerie(m){
-                                    background-color: transparent;
+                                    background-color: white;
                                     visibility: visible;
                                     opacity: 1;
                                     position: absolute;
                                     box-shadow: none;
                                     margin: 0;
                                     padding: 15px;
-                                    top: 85px;
-                                    left: -60px;
+                                    top: 60px;
                                     width: 100%;
                                     height: 100%;
-                                    max-width: none;
-                                    min-width: auto;
-                                    display: block;
+                                    display: none;
                                     transform: translateX(0%);
                                     overflow-y: auto;
 
@@ -238,24 +241,24 @@
                                     @keyframes slideLeft {
                                         0% {
                                             opacity: 0;
-                                            transform: translateX(100%);
+                                            transform: translateY(100%);
                                         }
-        
+
                                         100% {
                                             opacity: 1;
-                                            transform: translateX(0%);
+                                            transform: translateY(0%);
                                         }
                                     }
         
                                     @keyframes slideRight {
                                         0% {
                                             opacity: 1;
-                                            transform: translateX(0%);
+                                            transform: translateY(0%);
                                         }
         
                                         100% {
                                             opacity: 0;
-                                            transform: translateX(100%);
+                                            transform: translateY(100%);
                                         }
                                     }
                                 }
@@ -267,6 +270,10 @@
                                     justify-content: center;
                                     align-items: center;
                                     @include mQuerie(m){
+                                        width: 360px;
+                                        position: absolute;
+                                        top: 0;
+                                        left: 0;
                                         flex-direction: column;
                                     }
                                 }
@@ -280,6 +287,14 @@
                                     align-items: center;
                                     padding: 20px;
 
+                                    @include mQuerie(m){
+                                        width: 360px;
+                                        position: relative;
+                                        left: -40px;
+                                        justify-content: flex-start;
+                                        border-bottom: solid 1px rgba(0, 0, 0, .1);
+                                    }
+
                                     a {
                                         font-size: 1.5rem;
                                         color: rgb(255, 255, 255);
@@ -291,6 +306,7 @@
                                         &:hover {
                                             color: rgb(232, 204, 133);
                                         }
+
                                     }
 
                                     img {
