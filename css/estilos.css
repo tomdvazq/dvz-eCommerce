@@ -54,7 +54,8 @@ li {
         left: 0;
         top: 0;
         height: 100%;
-        width: 350px; } }
+        width: 350px;
+        display: none; } }
     @media (max-width: 1030px) {
       .encabezado .container .row .nav .menu-overlay {
         position: fixed;
@@ -97,7 +98,9 @@ li {
           background-color: #ffffff;
           top: 0; }
           .encabezado .container .row .nav .menu .mobile-menu-head.active .go-back {
-            display: block; } }
+            display: block; }
+          .encabezado .container .row .nav .menu .mobile-menu-head.active .current-menu_title {
+            visibility: visible; } }
       .encabezado .container .row .nav .menu .mobile-menu-head .go-back {
         height: 60px;
         width: 60px;
@@ -112,9 +115,17 @@ li {
           font-size: 50px;
           padding: 5px 0px; }
       .encabezado .container .row .nav .menu .mobile-menu-head .current-menu_title {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
         font-size: 20px;
         font-weight: 500;
-        color: #000000; }
+        color: #000000;
+        visibility: hidden; }
+        .encabezado .container .row .nav .menu .mobile-menu-head .current-menu_title img {
+          width: 45px;
+          height: 45px; }
       .encabezado .container .row .nav .menu .mobile-menu-head .mobile-menu-close {
         height: 60px;
         width: 60px;
@@ -264,6 +275,19 @@ li {
               height: 32px;
               margin-right: 10px;
               border-radius: 50%; }
+      .encabezado .container .row .nav .menu .menu-main .img {
+        display: none; }
+        @media (max-width: 1030px) {
+          .encabezado .container .row .nav .menu .menu-main .img {
+            display: block;
+            width: 360px;
+            position: relative;
+            left: -40px;
+            margin: 40px 0px; }
+            .encabezado .container .row .nav .menu .menu-main .img img {
+              width: 100px;
+              height: 100px;
+              margin: 0px 130px; } }
       .encabezado .container .row .nav .menu .menu-main .item-father:hover .sub-menu {
         visibility: visible;
         opacity: 1; }
@@ -326,6 +350,8 @@ li {
           color: #4A299C; }
   .encabezado .container .v-center {
     align-items: center; }
+  .encabezado #trigger:checked .nav {
+    border: solid 1px red; }
 
 .cuerpo {
   grid-area: main;
