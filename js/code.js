@@ -18,12 +18,15 @@ menuMain.addEventListener("click", (e) => {
 goBack.addEventListener("click", () => {
     hideSubMenu();
 })
+
 menuTrigger.addEventListener("click", () => {
     toggleMenu();
 })
+
 closeMenu.addEventListener("click", () => {
     toggleMenu();
 })
+
 document.querySelector(".menu-overlay").addEventListener("click", () => {
     toggleMenu();
 })
