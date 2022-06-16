@@ -55,7 +55,7 @@ li {
         visibility: hidden;
         opacity: 0;
         transition: all 0.5s ease; } }
-    .encabezado .container .row .nav .menu-overlay.active {
+    .encabezado .container .row .nav .menu-overlay.open {
       visibility: visible;
       opacity: 1; }
     @media (max-width: 1030px) {
@@ -68,8 +68,8 @@ li {
         height: 100%;
         transition: all 0.5s ease;
         z-index: 1100;
-        transform: translateX(-100%); }
-        .encabezado .container .row .nav .menu.active {
+        transform: translateX(-150%); }
+        .encabezado .container .row .nav .menu.open {
           transform: translateX(0%); } }
     .encabezado .container .row .nav .menu .mobile-menu-head {
       display: none; }

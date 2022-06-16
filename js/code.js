@@ -32,8 +32,8 @@ document.querySelector(".menu-overlay").addEventListener("click", () => {
 })
 
 function toggleMenu() {
-    menu.classList.toggle("active");
-    document.querySelector(".menu-overlay").classList.toggle("active");
+    menu.classList.toggle("open");
+    document.querySelector(".menu-overlay").classList.toggle("open");
 }
 
 function showSubMenu(hasChildren) {
