@@ -350,6 +350,9 @@ li {
   @media (max-width: 1030px) {
     .cuerpo {
       grid-template-rows: 900px repeat(3, 1fr); } }
+  @media (max-width: 420px) {
+    .cuerpo {
+      grid-template-rows: 500px repeat(3, 1fr); } }
   .cuerpo .portada {
     background: center url(../../assets/img/editor-main.jpg);
     background-size: cover;
@@ -363,6 +366,11 @@ li {
       .cuerpo .portada {
         flex-direction: column;
         justify-content: center; } }
+    @media (max-width: 420px) {
+      .cuerpo .portada {
+        justify-content: flex-start;
+        align-items: center;
+        padding: 20px 0px; } }
     .cuerpo .portada .text {
       display: flex;
       flex-direction: column;
@@ -382,6 +390,12 @@ li {
         @media (max-width: 1250px) {
           .cuerpo .portada .text h1, .cuerpo .portada .text p, .cuerpo .portada .text a {
             font-size: 4rem; } }
+        @media (max-width: 530px) {
+          .cuerpo .portada .text h1, .cuerpo .portada .text p, .cuerpo .portada .text a {
+            font-size: 3rem; } }
+        @media (max-width: 420px) {
+          .cuerpo .portada .text h1, .cuerpo .portada .text p, .cuerpo .portada .text a {
+            font-size: 2.5rem; } }
         .cuerpo .portada .text h1 span, .cuerpo .portada .text p span, .cuerpo .portada .text a span {
           font-family: IBM;
           display: block; }
@@ -397,6 +411,12 @@ li {
         @media (max-width: 1250px) {
           .cuerpo .portada .text p, .cuerpo .portada .text a {
             font-size: 2.5rem; } }
+        @media (max-width: 530px) {
+          .cuerpo .portada .text p, .cuerpo .portada .text a {
+            font-size: 2rem; } }
+        @media (max-width: 420px) {
+          .cuerpo .portada .text p, .cuerpo .portada .text a {
+            font-size: 1.6rem; } }
       .cuerpo .portada .text a {
         text-decoration: none;
         margin-top: 15px;
@@ -414,6 +434,9 @@ li {
         @media (max-width: 1030px) {
           .cuerpo .portada .text a {
             margin: 15px 0px; } }
+        @media (max-width: 530px) {
+          .cuerpo .portada .text a {
+            padding: 10px; } }
     .cuerpo .portada .img img {
       width: 700px;
       height: 500px;
@@ -428,6 +451,10 @@ li {
       @media (max-width: 1030px) {
         .cuerpo .portada .img img {
           height: 400px; } }
+      @media (max-width: 420px) {
+        .cuerpo .portada .img img {
+          height: 300px;
+          width: 300px; } }
 
 .pie {
   grid-area: footer; }

@@ -17,5 +17,9 @@
         @media (max-width: 530px){
             @content;
         }
+    } @else if $size==mobile{
+        @media (max-width: 420px){
+            @content;
+        }
     }
 }

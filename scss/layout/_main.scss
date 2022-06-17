@@ -6,6 +6,9 @@
     @include mQuerie(m){
         grid-template-rows: 900px repeat(3, 1fr);
     }
+    @include mQuerie(mobile){
+        grid-template-rows: 500px repeat(3, 1fr);
+    }
         .portada{
             background: center url(../../assets/img/editor-main.jpg);
             background-size: cover;
@@ -18,6 +21,11 @@
             @include mQuerie(m){
                 flex-direction: column;
                 justify-content: center;
+            }
+            @include mQuerie(mobile){
+                justify-content: flex-start;
+                align-items: center;
+                padding: 20px 0px;
             }
                 .text{
                     display: flex;
@@ -38,6 +46,12 @@
                         @include mQuerie(l){
                             font-size: 4rem;
                         }
+                        @include mQuerie(s){
+                            font-size: 3rem;
+                        }
+                        @include mQuerie(mobile){
+                            font-size: 2.5rem;
+                        }
                         span{
                             font-family: IBM;
                             display: block;
@@ -55,6 +69,12 @@
                         }
                         @include mQuerie(l){
                             font-size: 2.5rem;
+                        }
+                        @include mQuerie(s){
+                            font-size: 2rem;
+                        }
+                        @include mQuerie(mobile){
+                            font-size: 1.6rem;
                         }
                     }
                     a{
@@ -75,6 +95,9 @@
                         @include mQuerie(m){
                             margin: 15px 0px;
                         }
+                        @include mQuerie(s){
+                            padding: 10px;
+                        }
                     }
                 }
                 .img{
@@ -91,6 +114,10 @@
                         }
                         @include mQuerie(m){
                             height: 400px;
+                        }
+                        @include mQuerie(mobile){
+                            height: 300px;
+                            width: 300px;
                         }
                     }
                 }
