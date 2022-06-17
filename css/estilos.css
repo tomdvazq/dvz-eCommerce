@@ -300,13 +300,16 @@ li {
         .encabezado .container .row .users .bxs-user-circle {
           display: none; } }
       .encabezado .container .row .users .mobile-menu-trigger {
-        display: flex;
         height: 30px;
         width: 30px;
         margin-left: 15px;
         cursor: pointer;
         align-items: center;
-        justify-content: center; }
+        justify-content: center;
+        display: none; }
+        @media (max-width: 1030px) {
+          .encabezado .container .row .users .mobile-menu-trigger {
+            display: flex; } }
         .encabezado .container .row .users .mobile-menu-trigger span {
           display: block;
           height: 2px;

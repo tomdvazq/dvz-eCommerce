@@ -13,5 +13,9 @@
         @media (max-width: 1030px){
             @content;
         }
+    } @else if $size==s{
+        @media (max-width: 530px){
+            @content;
+        }
     }
 }
