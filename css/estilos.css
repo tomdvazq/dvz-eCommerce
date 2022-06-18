@@ -476,7 +476,7 @@ li {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #e9e9e9; }
+    background-color: rgba(0, 0, 0, 0.1); }
     .cuerpo .products .info {
       align-self: flex-start;
       margin: 20px; }
@@ -491,6 +491,7 @@ li {
       .cuerpo .products .info .text .text-p {
         font-family: 'Lato', 'Roboto Flex', sans-serif;
         font-size: 2.5rem;
+        color: black;
         margin: 0px 5px; }
         .cuerpo .products .info .text .text-p span {
           display: block;
@@ -501,46 +502,70 @@ li {
       display: flex;
       flex-direction: row;
       justify-content: center;
-      align-items: center; }
+      align-items: center;
+      margin-bottom: 20px; }
       .cuerpo .products .row-1 .card-1, .cuerpo .products .row-1 .card-2, .cuerpo .products .row-1 .card-3, .cuerpo .products .row-1 .card-4 {
         height: 250px;
         width: 400px;
         border-radius: 10px;
-        border: solid 1px black;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+        position: relative;
+        overflow: hidden;
+        box-sizing: border-box;
         cursor: pointer;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: flex-start; }
-        .cuerpo .products .row-1 .card-1 img, .cuerpo .products .row-1 .card-2 img, .cuerpo .products .row-1 .card-3 img, .cuerpo .products .row-1 .card-4 img {
-          height: 220px;
-          align-self: flex-start;
+        .cuerpo .products .row-1 .card-1 .card-principal img, .cuerpo .products .row-1 .card-2 .card-principal img, .cuerpo .products .row-1 .card-3 .card-principal img, .cuerpo .products .row-1 .card-4 .card-principal img {
+          position: absolute;
+          top: 0;
+          right: 0;
+          height: 100%;
+          width: 400px;
           width: 100%;
-          border-radius: 10px; }
-        .cuerpo .products .row-1 .card-1 h3, .cuerpo .products .row-1 .card-2 h3, .cuerpo .products .row-1 .card-3 h3, .cuerpo .products .row-1 .card-4 h3 {
-          font-family: 'Lato';
+          border-radius: 10px;
+          transform: scale(1);
+          opacity: 1;
+          transition: all 0.25s ease-in-out; }
+          .cuerpo .products .row-1 .card-1 .card-principal img:hover, .cuerpo .products .row-1 .card-2 .card-principal img:hover, .cuerpo .products .row-1 .card-3 .card-principal img:hover, .cuerpo .products .row-1 .card-4 .card-principal img:hover {
+            transform: scale(5);
+            opacity: 0; }
+        .cuerpo .products .row-1 .card-1 .card-effect, .cuerpo .products .row-1 .card-2 .card-effect, .cuerpo .products .row-1 .card-3 .card-effect, .cuerpo .products .row-1 .card-4 .card-effect {
+          height: 250px;
+          width: 400px;
+          background: center url(../../assets/img/music-section-2.jpg);
+          background-size: cover;
+          align-self: center;
           font-weight: 100;
-          margin-left: 6px;
-          font-size: 3rem; }
+          font-size: 3rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center; }
+          .cuerpo .products .row-1 .card-1 .card-effect .card-effect_brightness, .cuerpo .products .row-1 .card-2 .card-effect .card-effect_brightness, .cuerpo .products .row-1 .card-3 .card-effect .card-effect_brightness, .cuerpo .products .row-1 .card-4 .card-effect .card-effect_brightness {
+            width: 400px;
+            height: 250px;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center; }
+            .cuerpo .products .row-1 .card-1 .card-effect .card-effect_brightness .card-effect_text, .cuerpo .products .row-1 .card-2 .card-effect .card-effect_brightness .card-effect_text, .cuerpo .products .row-1 .card-3 .card-effect .card-effect_brightness .card-effect_text, .cuerpo .products .row-1 .card-4 .card-effect .card-effect_brightness .card-effect_text {
+              font-family: 'Roboto Flex', 'Lato';
+              font-size: 1.5rem;
+              font-weight: bold;
+              color: white;
+              text-align: center; }
       .cuerpo .products .row-1 .card-2 {
         margin: 0px 10px; }
       .cuerpo .products .row-1 .card-4 {
         margin-left: 10px; }
-    .cuerpo .products .row-2 {
+    .cuerpo .products .row-2 .text-1 {
       display: flex;
       flex-direction: row;
       justify-content: center;
-      align-items: center;
-      margin: 15px 0px; }
-      .cuerpo .products .row-2 .card-1, .cuerpo .products .row-2 .card-2, .cuerpo .products .row-2 .card-3, .cuerpo .products .row-2 .card-4 {
-        height: 250px;
-        width: 400px;
-        border: solid 1px black;
-        border-radius: 10px; }
-      .cuerpo .products .row-2 .card-2 {
-        margin: 0px 10px; }
-      .cuerpo .products .row-2 .card-4 {
-        margin-left: 10px; }
+      align-items: center; }
 
 .pie {
   grid-area: footer; }
