@@ -4,6 +4,14 @@
   font-family: IBM;
   src: url(../../assets/fonts/IBM/IBMPlexSans-Regular.ttf); }
 
+@font-face {
+  font-family: Comforta;
+  src: url(../../assets/fonts/Comforta/Comfortaa-SemiBold.ttf); }
+
+@font-face {
+  font-family: Lato;
+  src: url(../../assets/fonts/Lato/Lato-Regular.ttf); }
+
 * {
   margin: 0;
   top: 0;
@@ -455,6 +463,41 @@ li {
         .cuerpo .portada .img img {
           height: 300px;
           width: 300px; } }
+  .cuerpo .products {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #e9e9e9; }
+    .cuerpo .products .info {
+      align-self: flex-start;
+      margin: 20px; }
+      .cuerpo .products .info .text .text-h2 {
+        font-family: 'Lato', 'Roboto Flex', sans-serif;
+        font-weight: bold;
+        font-size: 6rem;
+        background: #4A299C;
+        background: radial-gradient(circle farthest-side at bottom left, #4A299C 0%, #9C2987 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent; }
+      .cuerpo .products .info .text .text-p {
+        font-family: 'Lato', 'Roboto Flex', sans-serif;
+        font-size: 2.5rem;
+        margin: 0px 5px; }
+        .cuerpo .products .info .text .text-p span {
+          display: block;
+          font-family: 'Lato', 'Roboto Flex', sans-serif;
+          font-size: 2.5rem;
+          font-weight: bold; }
+      .cuerpo .products .info .row-1 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center; }
+        .cuerpo .products .info .row-1 .card-1, .cuerpo .products .info .row-1 .card-2, .cuerpo .products .info .row-1 .card-3, .cuerpo .products .info .row-1 .card-4 {
+          height: 300px;
+          width: 300px;
+          border: solid 1px black; }
 
 .pie {
   grid-area: footer; }
