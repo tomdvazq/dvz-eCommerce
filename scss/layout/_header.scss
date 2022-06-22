@@ -1,17 +1,18 @@
 .encabezado {
     grid-area: header;
-    box-shadow: -2px 21px 201px -21px black;
-    z-index: 99;
+    box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, .1);
+    z-index: 9999;
+    position: fixed;
+    width: 100vw;
+    height: 80px;
 
     .container {
-
         .row {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
             padding: 0px 40px;
-            box-shadow: 0px 14px 14px -21px black;
-
+            background-color: white;
 
             .logo {
                 img {
@@ -95,7 +96,8 @@
                                 .go-back {
                                     display: block;
                                 }
-                                .current-menu_title{
+
+                                .current-menu_title {
                                     visibility: visible;
                                 }
                             }
@@ -127,7 +129,8 @@
                             font-weight: 500;
                             color: #000000;
                             visibility: hidden;
-                            img{
+
+                            img {
                                 width: 45px;
                                 height: 45px;
                             }
@@ -215,7 +218,7 @@
                                     padding: 0 50px 0 15px;
                                     display: block;
                                     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-                                    
+
                                 }
 
                             }
@@ -225,8 +228,8 @@
                                 /* Caja contenedora del dropdown menú*/
                                 position: absolute;
                                 z-index: 500;
-                                background-color: rgba(116, 116, 116, .7);
-                                box-shadow: -2px 2px 70px -25px rgba(0, 0, 0, 0.3);
+                                background: rgb(5, 26, 75);
+                                background: linear-gradient(90deg, rgba(5, 26, 75, 1) 0%, rgba(87, 42, 105, 1) 100%);
                                 padding: 20px 30px;
                                 transition: all 0.5s ease;
                                 top: 80px;
@@ -234,8 +237,10 @@
                                 right: 0;
                                 opacity: 0;
                                 visibility: hidden;
-                                @include mQuerie(m){
+
+                                @include mQuerie(m) {
                                     background-color: white;
+                                    background: white;
                                     visibility: visible;
                                     opacity: 1;
                                     position: absolute;
@@ -250,7 +255,7 @@
                                     overflow-y: auto;
 
 
-                                    &.active{
+                                    &.active {
                                         display: block;
                                     }
 
@@ -265,13 +270,13 @@
                                             transform: translateY(0%);
                                         }
                                     }
-        
+
                                     @keyframes slideRight {
                                         0% {
                                             opacity: 1;
                                             transform: translateY(0%);
                                         }
-        
+
                                         100% {
                                             opacity: 0;
                                             transform: translateY(100%);
@@ -285,7 +290,8 @@
                                     flex-direction: row;
                                     justify-content: center;
                                     align-items: center;
-                                    @include mQuerie(m){
+
+                                    @include mQuerie(m) {
                                         width: 360px;
                                         position: absolute;
                                         top: 0;
@@ -303,7 +309,7 @@
                                     align-items: center;
                                     padding: 20px;
 
-                                    @include mQuerie(m){
+                                    @include mQuerie(m) {
                                         width: 360px;
                                         position: relative;
                                         left: -40px;
@@ -338,15 +344,17 @@
 
                         }
 
-                        .img{
+                        .img {
                             display: none;
-                            @include mQuerie(m){
+
+                            @include mQuerie(m) {
                                 display: block;
                                 width: 360px;
                                 position: relative;
                                 left: -40px;
                                 margin: 40px 0px;
-                                img{
+
+                                img {
                                     width: 100px;
                                     height: 100px;
                                     margin: 0px 130px;
@@ -402,7 +410,8 @@
                     align-items: center;
                     justify-content: center;
                     display: none;
-                    @include mQuerie(m){
+
+                    @include mQuerie(m) {
                         display: flex;
                     }
 

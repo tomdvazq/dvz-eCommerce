@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Anek+Latin:wght@100&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,200&display=swap");
 @font-face {
   font-family: IBM;
@@ -30,7 +31,8 @@ html {
   font-size: 62.5%; }
 
 img {
-  max-width: 100%; }
+  max-width: 100%;
+  max-height: 100%; }
 
 a {
   text-decoration: none; }
@@ -46,14 +48,17 @@ li {
 
 .encabezado {
   grid-area: header;
-  box-shadow: -2px 21px 201px -21px black;
-  z-index: 99; }
+  box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+  position: fixed;
+  width: 100vw;
+  height: 80px; }
   .encabezado .container .row {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 0px 40px;
-    box-shadow: 0px 14px 14px -21px black; }
+    background-color: white; }
     .encabezado .container .row .logo img {
       height: 80px; }
     @media (max-width: 1030px) {
@@ -181,7 +186,7 @@ li {
                 line-height: 50px;
                 font-size: 3rem; } }
           .encabezado .container .row .nav .menu .menu-main .nav-item .nav-link:hover {
-            color: #4A299C; }
+            color: #572a69; }
           @media (max-width: 1030px) {
             .encabezado .container .row .nav .menu .menu-main .nav-item .nav-link {
               position: relative;
@@ -198,8 +203,8 @@ li {
           /* Caja contenedora del dropdown menú*/
           position: absolute;
           z-index: 500;
-          background-color: rgba(116, 116, 116, 0.7);
-          box-shadow: -2px 2px 70px -25px rgba(0, 0, 0, 0.3);
+          background: #051a4b;
+          background: linear-gradient(90deg, #051a4b 0%, #572a69 100%);
           padding: 20px 30px;
           transition: all 0.5s ease;
           top: 80px;
@@ -210,6 +215,7 @@ li {
           @media (max-width: 1030px) {
             .encabezado .container .row .nav .menu .menu-main .nav-item .sub-menu {
               background-color: white;
+              background: white;
               visibility: visible;
               opacity: 1;
               position: absolute;
@@ -354,7 +360,7 @@ li {
         font-size: 3.5rem;
         cursor: pointer; }
         .encabezado .container .row .users i:hover {
-          color: #4A299C; }
+          color: #572a69; }
   .encabezado .container .v-center {
     align-items: center; }
 
@@ -362,7 +368,8 @@ li {
   grid-area: main;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 600px 600px repeat(2, 1fr); }
+  grid-template-rows: 600px 1000px repeat(2, 1fr);
+  background-color: rgba(0, 0, 0, 0.05); }
   @media (max-width: 1030px) {
     .cuerpo {
       grid-template-rows: 900px repeat(3, 1fr); } }
@@ -370,7 +377,6 @@ li {
     .cuerpo {
       grid-template-rows: 500px repeat(3, 1fr); } }
   .cuerpo .portada {
-    background: center url(../../assets/img/editor-main.jpg);
     background-size: cover;
     height: 100%;
     display: flex;
@@ -396,7 +402,7 @@ li {
         .cuerpo .portada .text {
           align-items: center; } }
       .cuerpo .portada .text h1, .cuerpo .portada .text p, .cuerpo .portada .text a {
-        color: white;
+        color: black;
         font-family: IBM;
         font-weight: Bold;
         font-size: 6rem; }
@@ -436,11 +442,12 @@ li {
       .cuerpo .portada .text a {
         text-decoration: none;
         margin-top: 15px;
-        background: #4A299C;
+        color: white;
+        background: #572a69;
         font-size: 2.4rem;
         padding: 20px;
         border-radius: 5px;
-        border: solid 1px white; }
+        border: solid 2px black; }
         @media (max-width: 1470px) {
           .cuerpo .portada .text a {
             font-size: 1.8rem; } }
@@ -471,11 +478,97 @@ li {
         .cuerpo .portada .img img {
           height: 300px;
           width: 300px; } }
-  .cuerpo .clients {
-    background-color: #9C2987;
-    opacity: 0.8;
-    height: 600px;
-    box-shadow: 1px 2px 100px 1px rgba(0, 0, 0, 0.1); }
+  .cuerpo .products {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.01); }
+    .cuerpo .products .products-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 2rem; }
+      .cuerpo .products .products-text h2 {
+        font-size: 4rem;
+        font-family: "IBM";
+        font-weight: bold; }
+      .cuerpo .products .products-text p, .cuerpo .products .products-text .portada .text a, .cuerpo .portada .text .products .products-text a {
+        font-size: 2rem;
+        font-family: "IBM"; }
+    .cuerpo .products .products-cards {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap; }
+      .cuerpo .products .products-cards a {
+        margin: 15px; }
+        .cuerpo .products .products-cards a .cards {
+          width: 300px;
+          height: 270px;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: flex-start;
+          transition: all .2s ease-in-out; }
+          .cuerpo .products .products-cards a .cards:hover {
+            transform: scale(1.1); }
+          .cuerpo .products .products-cards a .cards img {
+            width: 300px;
+            height: 200px;
+            border-radius: 5px; }
+          .cuerpo .products .products-cards a .cards span {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            width: 300px;
+            position: relative;
+            bottom: 20px;
+            padding: 10px 5px; }
+            .cuerpo .products .products-cards a .cards span h3 {
+              font-size: 2rem;
+              font-weight: bold;
+              font-family: "IBM";
+              color: black; }
+              .cuerpo .products .products-cards a .cards span h3:hover {
+                color: #572a69; }
+            .cuerpo .products .products-cards a .cards span p, .cuerpo .products .products-cards a .cards span .portada .text a, .cuerpo .portada .text .products .products-cards a .cards span a {
+              font-size: 1.2rem;
+              font-family: "IBM"; }
+              .cuerpo .products .products-cards a .cards span p:hover, .cuerpo .products .products-cards a .cards span .portada .text a:hover, .cuerpo .portada .text .products .products-cards a .cards span a:hover {
+                color: #572a69;
+                text-decoration: underline; }
+    .cuerpo .products .products-test {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      .cuerpo .products .products-test h4 {
+        font-size: 3rem;
+        font-family: "IBM";
+        font-weight: bold; }
+      .cuerpo .products .products-test .test-logos {
+        margin-top: 50px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center; }
+        .cuerpo .products .products-test .test-logos .test-software {
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
+          align-items: center;
+          padding: 10px; }
+          .cuerpo .products .products-test .test-logos .test-software img {
+            width: 30px;
+            height: 30px; }
+          .cuerpo .products .products-test .test-logos .test-software p, .cuerpo .products .products-test .test-logos .test-software .portada .text a, .cuerpo .portada .text .products .products-test .test-logos .test-software a {
+            line-height: 30px;
+            font-size: 1.7rem;
+            margin-left: 7.5px; }
 
 .pie {
   grid-area: footer; }
