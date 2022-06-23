@@ -25,6 +25,18 @@
         @media (max-width: 1350px){
             @content ;
         }
+    } @else if $size==tablet{
+        @media (max-width: 810px){
+            @content ;
+        }
+    } @else if $size==tabletM{
+        @media (max-width: 760px){
+            @content ;
+        }
+    } @else if $size==preMobile{
+        @media (max-width: 450px){
+            @content ;
+        }
     }
 }
 

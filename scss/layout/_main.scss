@@ -2,7 +2,7 @@
     grid-area: main;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 600px 900px repeat(2, 1fr);
+    grid-template-rows: 600px 1fr repeat(2, 1fr);
     background-color: rgba(0, 0, 0, .05);
 
     @include mQuerie(m) {
@@ -167,14 +167,28 @@
         .products-text{
             @include flex(column, center, center);
             margin-bottom: 2rem;
+            @include mQuerie(preMobile){
+                margin: 10px 0px;
+            }
             h2{
+                margin-top: 10px;
                 font-size: 4rem;
                 font-family: "IBM";
                 font-weight: bold;
+                @include mQuerie(l){
+                    font-size: 3rem;
+                }
+                @include mQuerie(tablet){
+                    text-align: center;
+                }
             }
             p{
+                margin-top: 5px;
                 font-size: 2rem;
                 font-family: "IBM";
+                @include mQuerie(preMobile){
+                    font-size: 1.7rem
+                }
             }
         }
         .products-cards{
@@ -228,13 +242,74 @@
                 font-size: 3rem;
                 font-family: "IBM";
                 font-weight: bold;
+                @include mQuerie(s){
+                    font-size: 2.5rem;
+                }
+                @include mQuerie(preMobile){
+                    font-size: 2rem;
+                }
             }
             .test-logos{
                 margin-top: 50px;
                 @include flex(row, center, center);
+                @include mQuerie(tabletM){
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    grid-template-rows: repeat(5, 1fr);
+                    gap: 2px;
+                    .ae{
+                        grid-column: 2;
+                        grid-row: 1;
+                    }
+                    .pr{
+                        grid-column: 2;
+                        grid-row: 2;
+                    }
+                    .ai{
+                        grid-column: 2;
+                        grid-row: 3;
+                    }
+                    .ps{
+                        grid-column: 2;
+                        grid-row: 4;
+                    }
+                    .lr{
+                        grid-column: 2;
+                        grid-row: 5;
+                    }
+                }
+                @include mQuerie(s){
+                    grid-template-columns: 1fr;
+                    .ae{
+                        grid-column: 1;
+                        grid-row: 1;
+                    }
+                    .pr{
+                        grid-column: 1;
+                        grid-row: 2;
+                    }
+                    .ai{
+                        grid-column: 1;
+                        grid-row: 3;
+                    }
+                    .ps{
+                        grid-column: 1;
+                        grid-row: 4;
+                    }
+                    .lr{
+                        grid-column: 1;
+                        grid-row: 5;
+                    }
+                }
                 .test-software{
                     @include flex(row, flex-start, center);
                     padding: 10px;
+                    @include mQuerie(m){
+                        padding: 5px;
+                    }
+                    @include mQuerie(tabletM){
+                        border-bottom: solid 1px rgba(0, 0, 0, .1);
+                    }
                     img{
                         width: 30px;
                         height: 30px;
@@ -245,13 +320,24 @@
                         margin-left: 7.5px;
                         padding: 0px 15px;
                         border-right: solid 1px rgba(0, 0, 0, .1);
+                        @include mQuerie(l){
+                            padding: 0 5px;
+                            margin-left: 0;
+                            font-size: 1.4rem;
+                        }
+                        @include mQuerie(tablet){
+                            font-size: 1.2rem;
+                        }
+                        @include mQuerie(tabletM){
+                            padding: 10px;
+                            border-right: none;
+                        }
                     }
                     .lightroom{
                         border-right: none;
+                    }
                     }
                 }
             }
         }
     }
-
-}
