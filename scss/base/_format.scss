@@ -21,3 +21,13 @@ a {
 li {
     list-style: none;
 }
+
+body::-webkit-scrollbar{
+    width: 7px;
+    background-color: rgba(0, 0, 0, .1);
+}
+
+body::-webkit-scrollbar-thumb {
+    background: $terciario;
+    border-radius: 5px;
+}

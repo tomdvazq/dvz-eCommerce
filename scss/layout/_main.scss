@@ -2,7 +2,7 @@
     grid-area: main;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 600px 1000px repeat(2, 1fr);
+    grid-template-rows: 600px 900px repeat(2, 1fr);
     background-color: rgba(0, 0, 0, .05);
 
     @include mQuerie(m) {
@@ -101,13 +101,20 @@
             a {
                 @extend p;
                 text-decoration: none;
+                font-weight: bold;
                 margin-top: 15px;
                 color: white;
                 background: $principal;
                 font-size: 2.4rem;
                 padding: 20px;
                 border-radius: 5px;
-                border: solid 2px black;
+                border: solid 2px $secundario;
+                &:active{
+                    transition: all .4s ease-in-out;
+                    transform: scale(1.001);
+                    background: rgb(5, 26, 75);
+                    background: linear-gradient(90deg, rgba(5, 26, 75, 1) 0%, rgba(87, 42, 105, 1) 100%);
+                }
 
                 @include mQuerie(xl) {
                     font-size: 1.8rem;
@@ -131,7 +138,7 @@
             img {
                 width: 700px;
                 height: 500px;
-                opacity: .5;
+                opacity: 1;
 
                 @include mQuerie(xl) {
                     width: 600px;
@@ -236,6 +243,11 @@
                         line-height: 30px;
                         font-size: 1.7rem;
                         margin-left: 7.5px;
+                        padding: 0px 15px;
+                        border-right: solid 1px rgba(0, 0, 0, .1);
+                    }
+                    .lightroom{
+                        border-right: none;
                     }
                 }
             }

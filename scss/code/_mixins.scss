@@ -21,6 +21,10 @@
         @media (max-width: 420px){
             @content;
         }
+    } @else if $size==products{
+        @media (max-width: 1350px){
+            @content ;
+        }
     }
 }
 

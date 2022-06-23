@@ -40,6 +40,14 @@ a {
 li {
   list-style: none; }
 
+body::-webkit-scrollbar {
+  width: 7px;
+  background-color: rgba(0, 0, 0, 0.1); }
+
+body::-webkit-scrollbar-thumb {
+  background: #811b75;
+  border-radius: 5px; }
+
 .container {
   display: grid;
   grid-template-columns: 1fr;
@@ -368,7 +376,7 @@ li {
   grid-area: main;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 600px 1000px repeat(2, 1fr);
+  grid-template-rows: 600px 900px repeat(2, 1fr);
   background-color: rgba(0, 0, 0, 0.05); }
   @media (max-width: 1030px) {
     .cuerpo {
@@ -441,13 +449,19 @@ li {
             font-size: 1.6rem; } }
       .cuerpo .portada .text a {
         text-decoration: none;
+        font-weight: bold;
         margin-top: 15px;
         color: white;
         background: #572a69;
         font-size: 2.4rem;
         padding: 20px;
         border-radius: 5px;
-        border: solid 2px black; }
+        border: solid 2px #051a4b; }
+        .cuerpo .portada .text a:active {
+          transition: all .4s ease-in-out;
+          transform: scale(1.001);
+          background: #051a4b;
+          background: linear-gradient(90deg, #051a4b 0%, #572a69 100%); }
         @media (max-width: 1470px) {
           .cuerpo .portada .text a {
             font-size: 1.8rem; } }
@@ -463,7 +477,7 @@ li {
     .cuerpo .portada .img img {
       width: 700px;
       height: 500px;
-      opacity: .5; }
+      opacity: 1; }
       @media (max-width: 1470px) {
         .cuerpo .portada .img img {
           width: 600px;
@@ -568,7 +582,11 @@ li {
           .cuerpo .products .products-test .test-logos .test-software p, .cuerpo .products .products-test .test-logos .test-software .portada .text a, .cuerpo .portada .text .products .products-test .test-logos .test-software a {
             line-height: 30px;
             font-size: 1.7rem;
-            margin-left: 7.5px; }
+            margin-left: 7.5px;
+            padding: 0px 15px;
+            border-right: solid 1px rgba(0, 0, 0, 0.1); }
+          .cuerpo .products .products-test .test-logos .test-software .lightroom {
+            border-right: none; }
 
 .pie {
   grid-area: footer; }
