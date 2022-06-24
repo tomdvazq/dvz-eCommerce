@@ -21,6 +21,7 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+        background-color: rgba(0, 0, 0, .01);
         padding: 0px 20px;
 
         @include mQuerie(m) {
@@ -109,7 +110,8 @@
                 padding: 20px;
                 border-radius: 5px;
                 border: solid 2px $secundario;
-                &:active{
+
+                &:active {
                     transition: all .4s ease-in-out;
                     transform: scale(1.001);
                     background: rgb(5, 26, 75);
@@ -161,73 +163,90 @@
         }
     }
 
-    .products{
+    .products {
         @include flex(column, center, center);
-        background-color: rgba(0, 0, 0, .01);
-        .products-text{
+        background-color: rgba(0, 0, 0, .05);
+
+        .products-text {
             @include flex(column, center, center);
             margin-bottom: 2rem;
-            @include mQuerie(preMobile){
+
+            @include mQuerie(preMobile) {
                 margin: 10px 0px;
             }
-            h2{
+
+            h2 {
                 margin-top: 10px;
                 font-size: 4rem;
                 font-family: "IBM";
                 font-weight: bold;
-                @include mQuerie(l){
+
+                @include mQuerie(l) {
                     font-size: 3rem;
                 }
-                @include mQuerie(tablet){
+
+                @include mQuerie(tablet) {
                     text-align: center;
                 }
             }
-            p{
+
+            p {
                 margin-top: 5px;
                 font-size: 2rem;
                 font-family: "IBM";
-                @include mQuerie(preMobile){
+
+                @include mQuerie(preMobile) {
                     font-size: 1.7rem
                 }
             }
         }
-        .products-cards{
+
+        .products-cards {
             @include flex(row, center, center);
             flex-wrap: wrap;
-            a{
+
+            a {
                 margin: 15px;
-                .cards{
+
+                .cards {
                     width: 300px;
                     height: 270px;
                     @include flex(column, flex-start, flex-start);
                     transition: all .2s ease-in-out;
-                    &:hover{
+
+                    &:hover {
                         transform: scale(1.1);
                     }
-                    img{
+
+                    img {
                         width: 300px;
                         height: 200px;
                         border-radius: 5px;
                     }
-                    span{
+
+                    span {
                         @include flex(column, flex-start, flex-start);
                         width: 300px;
                         position: relative;
                         bottom: 20px;
                         padding: 10px 5px;
-                        h3{
+
+                        h3 {
                             font-size: 2rem;
                             font-weight: bold;
                             font-family: "IBM";
                             color: black;
-                            &:hover{
+
+                            &:hover {
                                 color: $principal;
                             }
                         }
-                        p{
+
+                        p {
                             font-size: 1.2rem;
                             font-family: "IBM";
-                            &:hover{
+
+                            &:hover {
                                 color: $principal;
                                 text-decoration: underline;
                             }
@@ -236,108 +255,203 @@
                 }
             }
         }
-        .products-test{
+
+        .products-test {
             @include flex(column, center, center);
-            h4{
+
+            h4 {
                 font-size: 3rem;
                 font-family: "IBM";
                 font-weight: bold;
-                @include mQuerie(s){
+
+                @include mQuerie(s) {
                     font-size: 2.5rem;
                 }
-                @include mQuerie(preMobile){
+
+                @include mQuerie(preMobile) {
                     font-size: 2rem;
                 }
             }
-            .test-logos{
+
+            .test-logos {
                 margin-top: 50px;
+                margin-bottom: 20px;
                 @include flex(row, center, center);
-                @include mQuerie(tabletM){
+
+                @include mQuerie(tabletM) {
                     display: grid;
                     grid-template-columns: repeat(3, 1fr);
                     grid-template-rows: repeat(5, 1fr);
                     gap: 2px;
-                    .ae{
+
+                    .ae {
                         grid-column: 2;
                         grid-row: 1;
                     }
-                    .pr{
+
+                    .pr {
                         grid-column: 2;
                         grid-row: 2;
                     }
-                    .ai{
+
+                    .ai {
                         grid-column: 2;
                         grid-row: 3;
                     }
-                    .ps{
+
+                    .ps {
                         grid-column: 2;
                         grid-row: 4;
                     }
-                    .lr{
+
+                    .lr {
                         grid-column: 2;
                         grid-row: 5;
                     }
                 }
-                @include mQuerie(s){
+
+                @include mQuerie(s) {
                     grid-template-columns: 1fr;
-                    .ae{
+
+                    .ae {
                         grid-column: 1;
                         grid-row: 1;
                     }
-                    .pr{
+
+                    .pr {
                         grid-column: 1;
                         grid-row: 2;
                     }
-                    .ai{
+
+                    .ai {
                         grid-column: 1;
                         grid-row: 3;
                     }
-                    .ps{
+
+                    .ps {
                         grid-column: 1;
                         grid-row: 4;
                     }
-                    .lr{
+
+                    .lr {
                         grid-column: 1;
                         grid-row: 5;
                     }
                 }
-                .test-software{
+
+                .test-software {
                     @include flex(row, flex-start, center);
                     padding: 10px;
-                    @include mQuerie(m){
+
+                    @include mQuerie(m) {
                         padding: 5px;
                     }
-                    @include mQuerie(tabletM){
+
+                    @include mQuerie(tabletM) {
                         border-bottom: solid 1px rgba(0, 0, 0, .1);
                     }
-                    img{
+
+                    img {
                         width: 30px;
                         height: 30px;
                     }
-                    p{
+
+                    p {
                         line-height: 30px;
                         font-size: 1.7rem;
                         margin-left: 7.5px;
                         padding: 0px 15px;
                         border-right: solid 1px rgba(0, 0, 0, .1);
-                        @include mQuerie(l){
+
+                        @include mQuerie(l) {
                             padding: 0 5px;
                             margin-left: 0;
                             font-size: 1.4rem;
                         }
-                        @include mQuerie(tablet){
+
+                        @include mQuerie(tablet) {
                             font-size: 1.2rem;
                         }
-                        @include mQuerie(tabletM){
+
+                        @include mQuerie(tabletM) {
                             padding: 10px;
                             border-right: none;
                         }
                     }
-                    .lightroom{
+
+                    .lightroom {
                         border-right: none;
-                    }
+
+                        @include mQuerie(preMobile) {
+                            border-bottom: none;
+                        }
                     }
                 }
             }
         }
     }
+
+    .clients {
+        background-color: rgba(0, 0, 0, .01);
+        @include flex(column, flex-start, center);
+
+        h4 {
+            font-size: 4rem;
+            font-family: "IBM";
+            font-weight: bold;
+            margin: 25px 0px;
+        }
+
+        .clients-cards {
+            @include flex(row, center, center);
+
+            .client-a {
+                width: 350px;
+                height: 300px;
+                border: solid 1px rgba(0, 0, 0, .02);
+                background-color: rgba(0, 0, 0, .005);
+                @include flex(column, flex-start, flex-start);
+                padding: 10px;
+
+                .client-com {
+                    width: 60px;
+                    height: 60px;
+                }
+
+                .client-text {
+                    font-family: "IBM";
+                    font-weight: 100;
+                    font-size: 1.5rem;
+                    margin: 10px 0px;
+                }
+
+                .client-name {
+                    font-family: "IBM";
+                    font-weight: 100;
+                    font-size: 1.5rem;
+
+                    span {
+                        display: block;
+                    }
+                }
+
+                .client-pic{
+                    width: 80px;
+                    height: 80px;
+                    border-radius: 50%;
+                    border: solid 3px $secundario;
+                    align-self: flex-end;
+                }
+            }
+        }
+
+        .client-b {
+            @extend .client-a;
+            margin: 0px 20px;
+        }
+
+        .client-c {
+            @extend .client-a;
+        }
+    }
+}
