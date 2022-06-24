@@ -179,7 +179,7 @@
                                 /* Categorías Anchor */
                                 font-family: 'Roboto Flex', sans-serif;
                                 font-size: 1.7rem;
-                                font-weight: 600;
+                                font-weight: 200;
                                 padding: 0px 10px;
                                 color: black;
 
@@ -205,7 +205,8 @@
                                 }
 
                                 &:hover {
-                                    color: $principal;
+                                    font-weight: bold;
+                                    color: $secundario;
                                 }
 
                                 @include mQuerie(m) {
@@ -456,7 +457,7 @@
                     cursor: pointer;
 
                     &:hover {
-                        color: $principal;
+                        color: $secundario;
                     }
                 }
             }

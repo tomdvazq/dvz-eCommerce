@@ -45,7 +45,7 @@ body::-webkit-scrollbar {
   background-color: rgba(0, 0, 0, 0.1); }
 
 body::-webkit-scrollbar-thumb {
-  background: #811b75;
+  background: #051a4b;
   border-radius: 5px; }
 
 .container {
@@ -176,7 +176,7 @@ body::-webkit-scrollbar-thumb {
           /* Categorías Anchor */
           font-family: 'Roboto Flex', sans-serif;
           font-size: 1.7rem;
-          font-weight: 600;
+          font-weight: 200;
           padding: 0px 10px;
           color: black; }
           .encabezado .container .row .nav .menu .menu-main .nav-item .nav-link:hover i {
@@ -194,7 +194,8 @@ body::-webkit-scrollbar-thumb {
                 line-height: 50px;
                 font-size: 3rem; } }
           .encabezado .container .row .nav .menu .menu-main .nav-item .nav-link:hover {
-            color: #572a69; }
+            font-weight: bold;
+            color: #051a4b; }
           @media (max-width: 1030px) {
             .encabezado .container .row .nav .menu .menu-main .nav-item .nav-link {
               position: relative;
@@ -368,7 +369,7 @@ body::-webkit-scrollbar-thumb {
         font-size: 3.5rem;
         cursor: pointer; }
         .encabezado .container .row .users i:hover {
-          color: #572a69; }
+          color: #051a4b; }
   .encabezado .container .v-center {
     align-items: center; }
 
@@ -376,8 +377,7 @@ body::-webkit-scrollbar-thumb {
   grid-area: main;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 600px 1fr repeat(2, 1fr);
-  background-color: rgba(0, 0, 0, 0.05); }
+  grid-template-rows: 600px 1fr 600px 200px; }
   @media (max-width: 1030px) {
     .cuerpo {
       grid-template-rows: 900px repeat(3, 1fr); } }
@@ -673,13 +673,13 @@ body::-webkit-scrollbar-thumb {
     background-color: rgba(0, 0, 0, 0.01);
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center; }
     .cuerpo .clients h4 {
       font-size: 4rem;
       font-family: "IBM";
       font-weight: bold;
-      margin: 25px 0px; }
+      margin: 30px 0px; }
     .cuerpo .clients .clients-cards {
       display: flex;
       flex-direction: row;
@@ -688,7 +688,7 @@ body::-webkit-scrollbar-thumb {
       .cuerpo .clients .clients-cards .client-a, .cuerpo .clients .clients-cards .client-b, .cuerpo .clients .clients-cards .client-c {
         width: 350px;
         height: 300px;
-        border: solid 1px rgba(0, 0, 0, 0.02);
+        border: solid 1px rgba(0, 0, 0, 0.05);
         background-color: rgba(0, 0, 0, 0.005);
         display: flex;
         flex-direction: column;
@@ -715,8 +715,8 @@ body::-webkit-scrollbar-thumb {
           border-radius: 50%;
           border: solid 3px #051a4b;
           align-self: flex-end; }
-    .cuerpo .clients .client-b {
-      margin: 0px 20px; }
+      .cuerpo .clients .clients-cards .client-b {
+        margin: 0px 20px; }
 
 .pie {
   grid-area: footer; }
