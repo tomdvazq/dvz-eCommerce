@@ -13,7 +13,7 @@
     }
 
     .portada {
-        // background: center url(../../assets/img/editor-main.jpg);
+        background: center url(../../assets/img/background.jpg);
         background-size: cover;
         height: 100%;
         display: flex;
@@ -45,7 +45,7 @@
             }
 
             h1 {
-                color: black;
+                color: white;
                 font-family: IBM;
                 font-weight: Bold;
                 font-size: 6rem;
@@ -80,6 +80,7 @@
                 @extend h1;
                 font-size: 3.5rem;
                 font-weight: 100;
+                color: black;
 
                 @include mQuerie(xl) {
                     font-size: 3rem;
@@ -165,7 +166,7 @@
 
     .products {
         @include flex(column, center, center);
-        background-color: rgba(0, 0, 0, .05);
+        background-color: rgba(0, 0, 0, .01);
 
         .products-text {
             @include flex(column, center, center);
@@ -412,6 +413,12 @@
                 background-color: rgba(0, 0, 0, .005);
                 @include flex(column, flex-start, flex-start);
                 padding: 10px;
+                &:hover{
+                    transition: all .2s ease-in-out;
+                    transform: scale(1.05);
+                    box-shadow: 0px 0px 3px 2px $terciario;
+                    border: solid 1px $principal;
+                }
 
                 .client-com {
                     width: 60px;
@@ -423,6 +430,10 @@
                     font-weight: 100;
                     font-size: 1.5rem;
                     margin: 10px 0px;
+                    a{
+                        font-weight: bold;
+                        color: black;
+                    }
                 }
 
                 .client-name {
@@ -444,8 +455,8 @@
                 .client-pic{
                     width: 80px;
                     height: 80px;
-                    border-radius: 50%;
-                    border: solid 3px $secundario;
+                    border-radius: 100%;
+                    border: solid 2px $secundario;
                     align-self: flex-end;
                 }
             }

@@ -385,6 +385,7 @@ body::-webkit-scrollbar-thumb {
     .cuerpo {
       grid-template-rows: 500px repeat(3, 1fr); } }
   .cuerpo .portada {
+    background: center url(../../assets/img/background.jpg);
     background-size: cover;
     height: 100%;
     display: flex;
@@ -411,7 +412,7 @@ body::-webkit-scrollbar-thumb {
         .cuerpo .portada .text {
           align-items: center; } }
       .cuerpo .portada .text h1, .cuerpo .portada .text p, .cuerpo .portada .text a {
-        color: black;
+        color: white;
         font-family: IBM;
         font-weight: Bold;
         font-size: 6rem; }
@@ -435,7 +436,8 @@ body::-webkit-scrollbar-thumb {
               text-align: center; } }
       .cuerpo .portada .text p, .cuerpo .portada .text a {
         font-size: 3.5rem;
-        font-weight: 100; }
+        font-weight: 100;
+        color: black; }
         @media (max-width: 1470px) {
           .cuerpo .portada .text p, .cuerpo .portada .text a {
             font-size: 3rem; } }
@@ -499,7 +501,7 @@ body::-webkit-scrollbar-thumb {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.05); }
+    background-color: rgba(0, 0, 0, 0.01); }
     .cuerpo .products .products-text {
       display: flex;
       flex-direction: column;
@@ -696,6 +698,11 @@ body::-webkit-scrollbar-thumb {
         justify-content: flex-start;
         align-items: flex-start;
         padding: 10px; }
+        .cuerpo .clients .clients-cards .client-a:hover, .cuerpo .clients .clients-cards .client-b:hover, .cuerpo .clients .clients-cards .client-c:hover {
+          transition: all .2s ease-in-out;
+          transform: scale(1.05);
+          box-shadow: 0px 0px 3px 2px #811b75;
+          border: solid 1px #572a69; }
         .cuerpo .clients .clients-cards .client-a .client-com, .cuerpo .clients .clients-cards .client-b .client-com, .cuerpo .clients .clients-cards .client-c .client-com {
           width: 60px;
           height: 60px; }
@@ -704,6 +711,9 @@ body::-webkit-scrollbar-thumb {
           font-weight: 100;
           font-size: 1.5rem;
           margin: 10px 0px; }
+          .cuerpo .clients .clients-cards .client-a .client-text a, .cuerpo .clients .clients-cards .client-b .client-text a, .cuerpo .clients .clients-cards .client-c .client-text a {
+            font-weight: bold;
+            color: black; }
         .cuerpo .clients .clients-cards .client-a .client-name, .cuerpo .clients .clients-cards .client-b .client-name, .cuerpo .clients .clients-cards .client-c .client-name {
           font-family: "IBM";
           font-weight: 100;
@@ -718,8 +728,8 @@ body::-webkit-scrollbar-thumb {
         .cuerpo .clients .clients-cards .client-a .client-pic, .cuerpo .clients .clients-cards .client-b .client-pic, .cuerpo .clients .clients-cards .client-c .client-pic {
           width: 80px;
           height: 80px;
-          border-radius: 50%;
-          border: solid 3px #051a4b;
+          border-radius: 100%;
+          border: solid 2px #051a4b;
           align-self: flex-end; }
       .cuerpo .clients .clients-cards .client-b {
         margin: 0px 20px; }
