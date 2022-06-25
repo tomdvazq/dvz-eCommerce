@@ -140,6 +140,7 @@
                 width: 700px;
                 height: 500px;
                 opacity: 1;
+                border-radius: 50%;
 
                 @include mQuerie(xl) {
                     width: 600px;
@@ -431,6 +432,12 @@
 
                     span {
                         display: block;
+                        img{
+                            position: relative;
+                            top: 15px;
+                            width: 24px;
+                            height: 24px;
+                        }
                     }
                 }
 

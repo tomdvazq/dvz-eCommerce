@@ -478,7 +478,8 @@ body::-webkit-scrollbar-thumb {
     .cuerpo .portada .img img {
       width: 700px;
       height: 500px;
-      opacity: 1; }
+      opacity: 1;
+      border-radius: 50%; }
       @media (max-width: 1470px) {
         .cuerpo .portada .img img {
           width: 600px;
@@ -709,6 +710,11 @@ body::-webkit-scrollbar-thumb {
           font-size: 1.5rem; }
           .cuerpo .clients .clients-cards .client-a .client-name span, .cuerpo .clients .clients-cards .client-b .client-name span, .cuerpo .clients .clients-cards .client-c .client-name span {
             display: block; }
+            .cuerpo .clients .clients-cards .client-a .client-name span img, .cuerpo .clients .clients-cards .client-b .client-name span img, .cuerpo .clients .clients-cards .client-c .client-name span img {
+              position: relative;
+              top: 15px;
+              width: 24px;
+              height: 24px; }
         .cuerpo .clients .clients-cards .client-a .client-pic, .cuerpo .clients .clients-cards .client-b .client-pic, .cuerpo .clients .clients-cards .client-c .client-pic {
           width: 80px;
           height: 80px;
