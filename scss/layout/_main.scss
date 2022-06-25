@@ -2,7 +2,7 @@
     grid-area: main;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 600px 1fr 600px 200px;
+    grid-template-rows: 600px 1fr 1fr 200px;
 
     @include mQuerie(m) {
         grid-template-rows: 900px repeat(3, 1fr);
@@ -13,7 +13,7 @@
     }
 
     .portada {
-        background: center url(../../assets/img/background.jpg);
+        // background: center url(../../assets/img/background.jpg);
         background-size: cover;
         height: 100%;
         display: flex;
@@ -45,7 +45,7 @@
             }
 
             h1 {
-                color: white;
+                color: black;
                 font-family: IBM;
                 font-weight: Bold;
                 font-size: 6rem;
@@ -393,14 +393,23 @@
     }
 
     .clients {
-        background-color: rgba(0, 0, 0, .01);
+        margin-top: 100px;
+        background-color: rgba(0, 0, 0, .05);
         @include flex(column, center, center);
 
         h4 {
+            margin: 45px 0px;
             font-size: 4rem;
             font-family: "IBM";
             font-weight: bold;
-            margin: 30px 0px;
+
+            @include mQuerie(l) {
+                font-size: 3rem;
+            }
+
+            @include mQuerie(tablet) {
+                text-align: center;
+            }
         }
 
         .clients-cards {
@@ -468,6 +477,33 @@
     
             .client-c {
                 @extend .client-a;
+            }
+        }
+
+        .clients-media{
+            @include flex(column, center, center);
+            padding: 50px 0px;
+            h5 {
+                margin: 45px 0px;
+                font-size: 3rem;
+                font-family: "IBM";
+                font-weight: bold;
+
+                @include mQuerie(s) {
+                    font-size: 2.5rem;
+                }
+
+                @include mQuerie(preMobile) {
+                    font-size: 2rem;
+                }
+            }
+            .clients-media-logos{
+                @include flex(row, center, center);
+                img{
+                    width: 70px;
+                    height: 70px;
+                    margin: 0px 50px;
+                }
             }
         }
     }
