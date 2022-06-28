@@ -68,15 +68,14 @@ window.onresize = function () {
 
 // FAQ Accordeon //
 
-const bloque = document.querySelectorAll('.bloque');
-const question = document.querySelectorAll('.question');
+const accordionItemHeader = document.querySelectorAll('.accordion-item-header');
 
-question.forEach( (cadaquestion, i)=>{
-    question[i].addEventListener('click', ()=>{
-
-        bloque.forEach( (cadaBloque, i)=>{
-            bloque[i].classList.remove("activo")
-        })
-        bloque[i].classList.add("activo")
+accordionItemHeader.forEach(accordionItemHeader=>{
+    accordionItemHeader.addEventListener('click', event => {
+        accordionItemHeader.classList.toggle('active');
+        const accordionItemBody = accordionItemHeader.nextElementSibling;
+        if(accordionItemHeader.classList.contains('active')) {
+            accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + "px";
+        } else accordionItemBody.style.maxHeight = 0;
     })
 })
