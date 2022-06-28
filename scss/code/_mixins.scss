@@ -36,6 +36,18 @@
     } @else if $size==preMobile{
         @media (max-width: 450px){
             @content ;
+        } 
+    } @else if $size==clients{
+        @media (max-width: 1110px){
+            @content ;
+        }
+    } @else if $size ==ss{
+        @media (max-width: 360px){
+            @content;
+        }
+    } @else if $size==tablethw{
+        @media (max-width: 720px){
+            @content;
         }
     }
 }

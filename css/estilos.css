@@ -377,13 +377,16 @@ body::-webkit-scrollbar-thumb {
   grid-area: main;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 600px 1fr 1fr 200px; }
-  @media (max-width: 1030px) {
+  grid-template-rows: 600px 1fr 800px 500px 1fr; }
+  @media (max-width: 1110px) {
     .cuerpo {
-      grid-template-rows: 900px repeat(3, 1fr); } }
-  @media (max-width: 420px) {
+      grid-template-rows: 600px 1fr 1500px 600px 1fr; } }
+  @media (max-width: 720px) {
     .cuerpo {
-      grid-template-rows: 500px repeat(3, 1fr); } }
+      grid-template-rows: 600px 1fr 1600px 600px 1fr; } }
+  @media (max-width: 360px) {
+    .cuerpo {
+      grid-template-rows: 600px 1fr 1750px 600px 1fr; } }
   .cuerpo .portada {
     background-size: cover;
     height: 100%;
@@ -391,7 +394,7 @@ body::-webkit-scrollbar-thumb {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.01);
+    background-color: rgba(0, 0, 0, 0.05);
     padding: 0px 20px; }
     @media (max-width: 1030px) {
       .cuerpo .portada {
@@ -501,6 +504,9 @@ body::-webkit-scrollbar-thumb {
     justify-content: center;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.01); }
+    @media (max-width: 1030px) {
+      .cuerpo .products {
+        justify-content: flex-start; } }
     .cuerpo .products .products-text {
       display: flex;
       flex-direction: column;
@@ -576,7 +582,11 @@ body::-webkit-scrollbar-thumb {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: center; }
+      align-items: center;
+      margin-top: 45px; }
+      @media (max-width: 1030px) {
+        .cuerpo .products .products-test {
+          justify-content: flex-start; } }
       .cuerpo .products .products-test h4 {
         font-size: 3rem;
         font-family: "IBM";
@@ -586,7 +596,8 @@ body::-webkit-scrollbar-thumb {
             font-size: 2.5rem; } }
         @media (max-width: 450px) {
           .cuerpo .products .products-test h4 {
-            font-size: 2rem; } }
+            font-size: 2rem;
+            text-align: center; } }
       .cuerpo .products .products-test .test-logos {
         margin-top: 50px;
         margin-bottom: 20px;
@@ -617,7 +628,9 @@ body::-webkit-scrollbar-thumb {
               grid-row: 5; } }
         @media (max-width: 530px) {
           .cuerpo .products .products-test .test-logos {
-            grid-template-columns: 1fr; }
+            grid-template-columns: 1fr;
+            margin-top: 0;
+            margin-bottom: 0; }
             .cuerpo .products .products-test .test-logos .ae {
               grid-column: 1;
               grid-row: 1; }
@@ -644,7 +657,10 @@ body::-webkit-scrollbar-thumb {
               padding: 5px; } }
           @media (max-width: 760px) {
             .cuerpo .products .products-test .test-logos .test-software {
-              border-bottom: solid 1px rgba(0, 0, 0, 0.1); } }
+              margin: 20px 0px; }
+              .cuerpo .products .products-test .test-logos .test-software:nth-child(5) {
+                margin: 0;
+                margin-top: 15px; } }
           .cuerpo .products .products-test .test-logos .test-software img {
             width: 30px;
             height: 30px; }
@@ -668,16 +684,15 @@ body::-webkit-scrollbar-thumb {
                 border-right: none; } }
           .cuerpo .products .products-test .test-logos .test-software .lightroom {
             border-right: none; }
-            @media (max-width: 450px) {
-              .cuerpo .products .products-test .test-logos .test-software .lightroom {
-                border-bottom: none; } }
   .cuerpo .clients {
-    margin-top: 100px;
     background-color: rgba(0, 0, 0, 0.05);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center; }
+    @media (max-width: 1350px) {
+      .cuerpo .clients {
+        justify-content: flex-start; } }
     .cuerpo .clients h4 {
       margin: 45px 0px;
       font-size: 4rem;
@@ -694,6 +709,9 @@ body::-webkit-scrollbar-thumb {
       flex-direction: row;
       justify-content: center;
       align-items: center; }
+      @media (max-width: 1110px) {
+        .cuerpo .clients .clients-cards {
+          flex-direction: column; } }
       .cuerpo .clients .clients-cards .client-a, .cuerpo .clients .clients-cards .client-b, .cuerpo .clients .clients-cards .client-c {
         width: 350px;
         height: 300px;
@@ -707,8 +725,16 @@ body::-webkit-scrollbar-thumb {
         .cuerpo .clients .clients-cards .client-a:hover, .cuerpo .clients .clients-cards .client-b:hover, .cuerpo .clients .clients-cards .client-c:hover {
           transition: all .2s ease-in-out;
           transform: scale(1.05);
-          box-shadow: 0px 0px 3px 2px #811b75;
-          border: solid 1px #572a69; }
+          box-shadow: 0px 0px 3px 2px #3333AA;
+          border: solid 1px #3333AA; }
+        @media (max-width: 1110px) {
+          .cuerpo .clients .clients-cards .client-a, .cuerpo .clients .clients-cards .client-b, .cuerpo .clients .clients-cards .client-c {
+            width: 400px;
+            margin: 15px 0px; } }
+        @media (max-width: 450px) {
+          .cuerpo .clients .clients-cards .client-a, .cuerpo .clients .clients-cards .client-b, .cuerpo .clients .clients-cards .client-c {
+            width: 300px;
+            margin: 15px 0px; } }
         .cuerpo .clients .clients-cards .client-a .client-com, .cuerpo .clients .clients-cards .client-b .client-com, .cuerpo .clients .clients-cards .client-c .client-com {
           width: 60px;
           height: 60px; }
@@ -761,10 +787,135 @@ body::-webkit-scrollbar-thumb {
         flex-direction: row;
         justify-content: center;
         align-items: center; }
+        @media (max-width: 1030px) {
+          .cuerpo .clients .clients-media .clients-media-logos {
+            flex-wrap: wrap; } }
         .cuerpo .clients .clients-media .clients-media-logos img {
           width: 70px;
           height: 70px;
-          margin: 0px 50px; }
+          margin: 0px 50px;
+          filter: opacity(0.2) grayscale(1); }
+          .cuerpo .clients .clients-media .clients-media-logos img:hover {
+            filter: grayscale(0); }
+          @media (max-width: 1030px) {
+            .cuerpo .clients .clients-media .clients-media-logos img {
+              margin: 25px; } }
+  .cuerpo .publicidad {
+    background: center fixed url(../../assets/img/production.jpg);
+    background-size: cover;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; }
+    @media (max-width: 1030px) {
+      .cuerpo .publicidad {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; } }
+    @media (max-width: 530px) {
+      .cuerpo .publicidad {
+        margin: 20px 0px; } }
+    .cuerpo .publicidad .publicidad-txt {
+      margin: 0px 20px;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start; }
+      @media (max-width: 1030px) {
+        .cuerpo .publicidad .publicidad-txt {
+          justify-content: center;
+          align-items: center; } }
+      .cuerpo .publicidad .publicidad-txt h5 {
+        font-size: 8rem;
+        color: white;
+        font-family: "IBM";
+        font-weight: bold; }
+        @media (max-width: 530px) {
+          .cuerpo .publicidad .publicidad-txt h5 {
+            font-size: 5.5rem; } }
+      .cuerpo .publicidad .publicidad-txt p, .cuerpo .publicidad .publicidad-txt .portada .text a, .cuerpo .portada .text .publicidad .publicidad-txt a {
+        font-size: 3rem;
+        width: 850px;
+        color: white;
+        font-family: "IBM";
+        font-weight: 100;
+        margin: 40px 0px; }
+        @media (max-width: 1030px) {
+          .cuerpo .publicidad .publicidad-txt p, .cuerpo .publicidad .publicidad-txt .portada .text a, .cuerpo .portada .text .publicidad .publicidad-txt a {
+            font-size: 2.5rem;
+            width: auto;
+            text-align: center; } }
+        @media (max-width: 530px) {
+          .cuerpo .publicidad .publicidad-txt p, .cuerpo .publicidad .publicidad-txt .portada .text a, .cuerpo .portada .text .publicidad .publicidad-txt a {
+            font-size: 2.3rem;
+            margin: 20px 0px; } }
+      .cuerpo .publicidad .publicidad-txt a {
+        background: linear-gradient(to left, rgba(178, 65, 139, 0.3) 0%, rgba(2, 12, 71, 0.3) 100%);
+        border: solid 1px white;
+        border-radius: 5px;
+        padding: 15px;
+        font-size: 3rem;
+        font-family: "IBM";
+        color: white; }
+        .cuerpo .publicidad .publicidad-txt a:hover {
+          transition: all .5s ease-in-out; }
+        @media (max-width: 530px) {
+          .cuerpo .publicidad .publicidad-txt a {
+            font-size: 2rem; } }
+        @media (max-width: 360px) {
+          .cuerpo .publicidad .publicidad-txt a {
+            font-size: 1.7rem; } }
+  .cuerpo .faq {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center; }
+    .cuerpo .faq h4 {
+      margin-top: 25px;
+      font-size: 5rem;
+      font-family: "IBM";
+      font-weight: bold; }
+      @media (max-width: 530px) {
+        .cuerpo .faq h4 {
+          font-size: 2.5rem; } }
+      @media (max-width: 450px) {
+        .cuerpo .faq h4 {
+          font-size: 2rem;
+          text-align: center; } }
+    .cuerpo .faq .faq-acordeon {
+      margin: 25px;
+      border: solid 1px rgba(0, 0, 0, 0.05);
+      width: 50%;
+      max-width: 120rem; }
+      .cuerpo .faq .faq-acordeon .bloque {
+        padding: 20px;
+        border-bottom: solid 1px rgba(0, 0, 0, 0.05); }
+        .cuerpo .faq .faq-acordeon .bloque .question {
+          font-size: 2rem;
+          font-family: "IBM";
+          font-weight: bold;
+          cursor: pointer; }
+          @media (max-width: 530px) {
+            .cuerpo .faq .faq-acordeon .bloque .question {
+              font-size: 2rem; } }
+          @media (max-width: 450px) {
+            .cuerpo .faq .faq-acordeon .bloque .question {
+              font-size: 2rem;
+              text-align: center; } }
+        .cuerpo .faq .faq-acordeon .bloque .answer {
+          margin-top: 10px;
+          font-family: "IBM";
+          font-weight: 100;
+          font-size: 1.4rem;
+          height: 0;
+          padding: 0;
+          display: none;
+          transition: all .5 ease; }
+        .cuerpo .faq .faq-acordeon .bloque.activo .answer {
+          display: block;
+          height: 100%; }
 
 .pie {
   grid-area: footer; }
