@@ -19,8 +19,6 @@
         @include mQuerie(mobile) {
             justify-content: center;
             align-items: center;
-            margin: auto;
-            border: solid 1px red;
             margin: 50px 0px;
             height: 600px;
         }
