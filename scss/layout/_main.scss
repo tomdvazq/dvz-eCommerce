@@ -2,18 +2,18 @@
     grid-area: main;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 600px 1fr 800px 500px 1fr;
+    grid-template-rows: 600px 1fr 800px 500px 800px;
 
     @include mQuerie(clients) {
-        grid-template-rows: 600px 1fr 1500px 600px 1fr;
+        grid-template-rows: 600px 1fr 1500px 600px 800px;
     }
 
     @include mQuerie(tablethw) {
-        grid-template-rows: 600px 1fr 1600px 600px 1fr;
+        grid-template-rows: 600px 1fr 1600px 600px 800px;
     }
 
     @include mQuerie(ss) {
-        grid-template-rows: 600px 1fr 1750px 600px 1fr;
+        grid-template-rows: 600px 1fr 1750px 600px 800px;
     }
 
 
@@ -580,7 +580,6 @@
         }
 
         @include mQuerie(s) {
-            margin: 20px 0px;
         }
 
         .publicidad-txt {
@@ -649,7 +648,8 @@
     }
 
     .faq {
-        @include flex(column, flex-start, center);
+        @include flex(column, center, center);
+        margin: auto;
 
         h4 {
             margin-top: 25px;
@@ -669,7 +669,7 @@
 
         .accordion {
             width: 90%;
-            max-width: 1000px;
+            max-width: 800px;
 
             .accordion-item {
                 color: black;
@@ -688,7 +688,8 @@
                     font-weight: bold;
                     font-size: 1.8rem;
                     cursor: pointer;
-                    &:hover{
+
+                    &:hover {
                         border-radius: 3px;
                         background-color: rgba(0, 0, 0, .07);
                     }
@@ -723,9 +724,9 @@
                     }
                 }
 
-                .accordion-item-header.active + .accordion-item-body{
-                        max-height: 200px;
-                        display: block;
+                .accordion-item-header.active+.accordion-item-body {
+                    max-height: 200px;
+                    display: block;
                 }
             }
         }
@@ -744,9 +745,9 @@
                 font-size: 2.2rem;
                 text-align: center;
             }
-        } 
+        }
 
-        .whatsapp{
+        .whatsapp {
             margin-top: 15px;
             @include flex(row, center, center);
             border-radius: 8px;
@@ -754,17 +755,19 @@
             border: solid 2px black;
             cursor: pointer;
             background-color: $principal;
-            &:active{
+
+            &:active {
                 background-color: #2CB740;
             }
 
-            i{
+            i {
                 font-size: 1.8rem;
                 margin-right: 5px;
                 color: white;
                 font-weight: bold;
             }
-            a{
+
+            a {
                 text-decoration: none;
                 font-weight: bold;
                 color: white;
@@ -773,5 +776,5 @@
             }
         }
 
-        }
     }
+}
