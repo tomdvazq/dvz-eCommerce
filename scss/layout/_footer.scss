@@ -1,4 +1,78 @@
 .pie{
     grid-area: footer;
     background-color: black;
+
+    .info{
+        @include flex(row, space-between, center);
+        margin: 0px 25px;
+        margin-top: 35px;
+        padding: 15px;
+        border-bottom: solid 1px rgba(255, 255, 255, .05);
+        @include mQuerie(footermobile){
+            padding: 10px;
+            flex-direction: column;
+        }
+        .info-a{
+            @include flex(column, center, flex-start);
+            @include mQuerie(footermobile){
+                margin: 15px 0px;
+                align-items: center;
+            }
+            h6{
+                font-family: "IBM";
+                color: white;
+                font-size: 1.4rem;
+            }
+            .info-links{
+                @include flex(column, center, flex-start);
+                @include mQuerie(footermobile){
+                    align-items: center;
+                }
+                a{
+                    font-family: "IBM";
+                    font-size: 1.4rem;
+                    color: white;
+                    text-decoration: none;
+                    margin: 5px 0px;
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+        .info-b{
+            @extend .info-a;
+        }
+        .info-c{
+            @extend .info-a;
+        }
+    }
+
+    .copyright{
+        @include flex(row, space-between, center);
+        margin: 0px 25px;
+        padding: 15px;
+        @include mQuerie(footertablet){
+            flex-direction: column;
+            justify-content: center;
+        }
+        p{
+            color: white;
+            font-size: 1.4rem;
+            @include mQuerie(footermobile){
+                text-align: center
+            }
+        }
+        .social{
+            @include flex(row, center, center);
+            font-size: 3rem;
+            color: white;
+            i{
+                margin: 0px 5px;
+                @include mQuerie(footertablet){
+                    margin: 15px 5px;
+                }
+            }
+        }
+    }
 }

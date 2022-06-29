@@ -49,6 +49,14 @@
         @media (max-width: 720px){
             @content;
         }
+    } @else if $size==footertablet{
+        @media (max-width: 855px){
+            @content;
+        }
+    } @else if $size==footermobile{
+        @media (max-width: 720px){
+            @content;
+        }
     }
 }
 

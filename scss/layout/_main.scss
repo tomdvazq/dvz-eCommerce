@@ -9,11 +9,11 @@
     }
 
     @include mQuerie(tablethw) {
-        grid-template-rows: 600px 1fr 1600px 600px 800px;
+        grid-template-rows: 600px 1fr 1550px 600px 800px;
     }
 
     @include mQuerie(ss) {
-        grid-template-rows: 600px 1fr 1750px 600px 800px;
+        grid-template-rows: 600px 1fr 1700px 600px 800px;
     }
 
 
