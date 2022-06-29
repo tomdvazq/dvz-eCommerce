@@ -67,10 +67,13 @@
             @include flex(row, center, center);
             font-size: 3rem;
             color: white;
-            i{
-                margin: 0px 5px;
-                @include mQuerie(footertablet){
-                    margin: 15px 5px;
+            a{
+                color: white;
+                i{
+                    margin: 0px 5px;
+                    @include mQuerie(footertablet){
+                        margin: 15px 5px;
+                    }
                 }
             }
         }
