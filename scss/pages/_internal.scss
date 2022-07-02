@@ -1,0 +1,34 @@
+.internal-main{
+    grid-area: 2;
+
+    .video{
+        height: 400px;
+        width: 100vw;
+        background: url(../../assets/img/background-internal.png);
+        background-size: cover;
+        @include flex(column, center, center);
+        border-bottom: solid 1px rgba(0, 0, 0, .1);
+        h2{
+            font-size: 6rem;
+            font-family: IBM;
+            font-weight: bold;
+            color: black;
+        }
+        p{
+            font-size: 4rem;
+            font-family: IBM;
+            font-weight: bold;
+            color: black;
+            margin: 20px 0px;
+        }
+        a{
+            font-size: 2rem;
+            font-family: IBM;
+            font-weight: bold;
+            color: white;
+            border-radius: 5px;
+            background-color: $principal;
+            padding: 10px;
+        }
+    }
+}
