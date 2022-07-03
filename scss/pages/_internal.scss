@@ -137,11 +137,11 @@
                     width: 230px;
                     border-radius: 5px;
                     margin: 20px auto 0;
-                    color: #ffffff;
+                    color: black;
                     border: none;
                     outline: none;
                     cursor: pointer;
-                    background-color: rgb(103, 75, 224);
+                    background-color: rgba(103, 75, 224, 0.1);
                     border-radius: 5px;
                     overflow: hidden;
                     transition: height 0.4s ease-in-out;
@@ -151,6 +151,7 @@
                         @include flex(row, space-between, center);
                         border-radius: 5px;
                         font-size: 1.7rem;
+                        font-weight: bold;
                     }
                 }
             }
