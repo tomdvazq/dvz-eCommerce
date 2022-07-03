@@ -79,3 +79,5 @@ accordionItemHeader.forEach(accordionItemHeader=>{
         } else accordionItemBody.style.maxHeight = 0;
     })
 })
+
+// Internal Dropdown Button //
