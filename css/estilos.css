@@ -1045,7 +1045,7 @@ body::-webkit-scrollbar-thumb {
   grid-row: 2; }
   .internal-main .welcome {
     height: 200px;
-    width: 100vw;
+    width: 100%;
     padding-left: 20px;
     background: linear-gradient(rgba(255, 255, 255, 0) 0%, #4f5ba4 100%), linear-gradient(270deg, #721b81 0%, #1d0664) 100%;
     display: flex;
@@ -1077,7 +1077,7 @@ body::-webkit-scrollbar-thumb {
       color: white; }
   .internal-main .products {
     display: grid;
-    grid-template-columns: 250px 1fr;
+    grid-template-columns: 250px 200px;
     grid-template-rows: 1fr; }
     .internal-main .products .filters {
       grid-column: 1;
@@ -1147,29 +1147,57 @@ body::-webkit-scrollbar-thumb {
                 border-radius: 3px;
                 position: absolute;
                 left: 17px; }
-      .internal-main .products .filters .parameters {
-        align-self: center;
-        margin: 10px 0px; }
-        .internal-main .products .filters .parameters button {
-          display: block;
-          width: 230px;
-          border-radius: 5px;
-          margin: 20px auto 0;
+      .internal-main .products .filters .select-menu {
+        width: 240px;
+        margin: 20px auto; }
+        .internal-main .products .filters .select-menu.active .options {
+          display: block; }
+        .internal-main .products .filters .select-menu.active .select-btn i {
+          transform: rotate(-180deg); }
+        .internal-main .products .filters .select-menu .select-btn {
+          display: flex;
+          height: 30px;
+          background-color: rgba(0, 0, 0, 0.08);
           color: black;
-          border: none;
-          outline: none;
+          padding: 20px;
+          font-size: 1.7rem;
+          font-weight: bold;
+          border-radius: 8px;
+          align-items: center;
+          justify-content: space-between;
           cursor: pointer;
-          background-color: rgba(103, 75, 224, 0.1);
-          border-radius: 5px;
-          overflow: hidden;
-          transition: height 0.4s ease-in-out; }
-          .internal-main .products .filters .parameters button .block-top {
-            padding: 10px;
-            width: 100%;
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); }
+          .internal-main .products .filters .select-menu .select-btn span {
+            font-family: IBM; }
+          .internal-main .products .filters .select-menu .select-btn i {
+            font-size: 2.5rem;
+            transition: .3s; }
+        .internal-main .products .filters .select-menu .options {
+          position: relative;
+          padding: 5px;
+          margin-top: 5px;
+          border-radius: 8px;
+          background-color: rgba(0, 0, 0, 0.08);
+          box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+          display: none; }
+          .internal-main .products .filters .select-menu .options .option {
             display: flex;
-            flex-direction: row;
-            justify-content: space-between;
+            height: 32px;
+            cursor: pointer;
             align-items: center;
-            border-radius: 5px;
-            font-size: 1.7rem;
-            font-weight: bold; }
+            justify-content: space-between;
+            padding: 0 10px;
+            margin: 10px 0px;
+            border-radius: 5px; }
+            .internal-main .products .filters .select-menu .options .option:hover {
+              background-color: rgba(0, 0, 0, 0.05); }
+            .internal-main .products .filters .select-menu .options .option i {
+              font-size: 25px;
+              margin-top: 5px;
+              margin-right: 12px;
+              text-align: center; }
+            .internal-main .products .filters .select-menu .options .option .option-text {
+              font-family: IBM;
+              font-size: 1.7rem;
+              font-weight: bold;
+              color: black; }
