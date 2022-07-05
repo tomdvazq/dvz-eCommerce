@@ -80,7 +80,7 @@ accordionItemHeader.forEach(accordionItemHeader=>{
     })
 })
 
-// Internal Dropdown Button //
+// Filters Dropdown Button //
 
 const optionMenu = document.querySelector(".select-menu");
 selectBtn = optionMenu.querySelector(".select-btn");
@@ -95,6 +95,23 @@ options.forEach(option =>{
         sBtn_text.innerText = selectedOption;
         console.log(selectedOption);
 
-        optionMenu.classList.remove('active')
+        optionMenu.classList.remove('active');
+    })
+})
+
+const optionMenu_2 = document.querySelector(".select-menu-2");
+selectBtn_2 = optionMenu_2.querySelector(".select-btn-2");
+options_2 = optionMenu_2.querySelectorAll(".option-2"),
+sBtn_text_2 = optionMenu_2.querySelector(".sBtn-text-2");
+
+selectBtn_2.addEventListener("click", () => optionMenu_2.classList.toggle('active'));
+
+options_2.forEach(option =>{
+    option_2.addEventListener('click', ()=>{
+        let selectedOption_2 = option.querySelector(".option-text-2").innerText;
+        sBtn_text_2.innerText = selectedOption_2;
+        console.log(selectedOption_2);
+
+        optionMenu_2.classList.remove('active');
     })
 })

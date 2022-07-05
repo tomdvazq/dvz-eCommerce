@@ -1147,14 +1147,14 @@ body::-webkit-scrollbar-thumb {
                 border-radius: 3px;
                 position: absolute;
                 left: 17px; }
-      .internal-main .products .filters .select-menu {
+      .internal-main .products .filters .parameters .select-menu, .internal-main .products .filters .parameters .select-menu-2, .internal-main .products .filters .parameters .select-menu-2.active .options-2, .internal-main .products .filters .parameters .select-menu-2.active .select-btn-2 i {
         width: 240px;
         margin: 20px auto; }
-        .internal-main .products .filters .select-menu.active .options {
+        .internal-main .products .filters .parameters .select-menu.active .options, .internal-main .products .filters .parameters .active.select-menu-2 .options, .internal-main .products .filters .parameters .select-menu-2.active .select-btn-2 i.active .options, .internal-main .products .filters .parameters .select-menu.active .select-menu-2 .options-2, .internal-main .products .filters .parameters .select-menu-2 .select-menu.active .options-2, .internal-main .products .filters .parameters .active.select-menu-2 .options-2, .internal-main .products .filters .parameters .select-menu-2.active .select-btn-2 i.active .options-2 {
           display: block; }
-        .internal-main .products .filters .select-menu.active .select-btn i {
+        .internal-main .products .filters .parameters .select-menu.active .select-btn i, .internal-main .products .filters .parameters .active.select-menu-2 .select-btn i, .internal-main .products .filters .parameters .select-menu.active .select-menu-2 .select-btn-2 i, .internal-main .products .filters .parameters .select-menu-2 .select-menu.active .select-btn-2 i, .internal-main .products .filters .parameters .active.select-menu-2 .select-btn-2 i {
           transform: rotate(-180deg); }
-        .internal-main .products .filters .select-menu .select-btn {
+        .internal-main .products .filters .parameters .select-menu .select-btn, .internal-main .products .filters .parameters .select-menu-2 .select-btn, .internal-main .products .filters .parameters .select-menu-2.active .options-2 .select-btn, .internal-main .products .filters .parameters .select-menu-2.active .select-btn-2 i .select-btn, .internal-main .products .filters .parameters .select-menu-2 .select-btn-2, .internal-main .products .filters .parameters .select-menu-2.active .options-2 .select-btn-2, .internal-main .products .filters .parameters .select-menu-2.active .select-btn-2 i .select-btn-2 {
           display: flex;
           height: 30px;
           background-color: rgba(0, 0, 0, 0.08);
@@ -1167,20 +1167,21 @@ body::-webkit-scrollbar-thumb {
           justify-content: space-between;
           cursor: pointer;
           box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); }
-          .internal-main .products .filters .select-menu .select-btn span {
+          .internal-main .products .filters .parameters .select-menu .select-btn span, .internal-main .products .filters .parameters .select-menu-2 .select-btn span, .internal-main .products .filters .parameters .select-menu-2.active .options-2 .select-btn span, .internal-main .products .filters .parameters .select-menu-2.active .select-btn-2 i .select-btn span, .internal-main .products .filters .parameters .select-menu-2 .select-btn-2 span, .internal-main .products .filters .parameters .select-menu-2.active .options-2 .select-btn-2 span, .internal-main .products .filters .parameters .select-menu-2.active .select-btn-2 i .select-btn-2 span {
             font-family: IBM; }
-          .internal-main .products .filters .select-menu .select-btn i {
+          .internal-main .products .filters .parameters .select-menu .select-btn i, .internal-main .products .filters .parameters .select-menu-2 .select-btn i, .internal-main .products .filters .parameters .select-menu-2.active .options-2 .select-btn i, .internal-main .products .filters .parameters .select-menu-2.active .select-btn-2 i .select-btn i, .internal-main .products .filters .parameters .select-menu-2 .select-btn-2 i, .internal-main .products .filters .parameters .select-menu-2.active .options-2 .select-btn-2 i, .internal-main .products .filters .parameters .select-menu-2.active .select-btn-2 i .select-btn-2 i {
             font-size: 2.5rem;
             transition: .3s; }
-        .internal-main .products .filters .select-menu .options {
+        .internal-main .products .filters .parameters .select-menu .options, .internal-main .products .filters .parameters .select-menu-2 .options, .internal-main .products .filters .parameters .select-menu-2.active .options-2 .options, .internal-main .products .filters .parameters .select-menu-2.active .select-btn-2 i .options, .internal-main .products .filters .parameters .select-menu-2 .options-2, .internal-main .products .filters .parameters .select-menu-2.active .options-2 .options-2, .internal-main .products .filters .parameters .select-menu-2.active .select-btn-2 i .options-2 {
           position: relative;
           padding: 5px;
           margin-top: 5px;
           border-radius: 8px;
           background-color: rgba(0, 0, 0, 0.08);
           box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+          transition: 0.3s;
           display: none; }
-          .internal-main .products .filters .select-menu .options .option {
+          .internal-main .products .filters .parameters .select-menu .options .option, .internal-main .products .filters .parameters .select-menu-2 .options .option, .internal-main .products .filters .parameters .select-menu-2.active .select-btn-2 i .options .option, .internal-main .products .filters .parameters .select-menu-2 .options-2 .option, .internal-main .products .filters .parameters .select-menu-2.active .select-btn-2 i .options-2 .option, .internal-main .products .filters .parameters .select-menu-2.active .options-2 .select-btn-2 i .options .option-2, .internal-main .products .filters .parameters .select-menu-2 .options-2 .option-2, .internal-main .products .filters .parameters .select-menu-2.active .select-btn-2 i .options-2 .option-2 {
             display: flex;
             height: 32px;
             cursor: pointer;
@@ -1189,14 +1190,14 @@ body::-webkit-scrollbar-thumb {
             padding: 0 10px;
             margin: 10px 0px;
             border-radius: 5px; }
-            .internal-main .products .filters .select-menu .options .option:hover {
+            .internal-main .products .filters .parameters .select-menu .options .option:hover, .internal-main .products .filters .parameters .select-menu-2 .options .option:hover, .internal-main .products .filters .parameters .select-menu-2 .options-2 .option:hover, .internal-main .products .filters .parameters .select-menu-2 .options-2 .option-2:hover {
               background-color: rgba(0, 0, 0, 0.05); }
-            .internal-main .products .filters .select-menu .options .option i {
+            .internal-main .products .filters .parameters .select-menu .options .option i, .internal-main .products .filters .parameters .select-menu-2 .options .option i, .internal-main .products .filters .parameters .select-menu-2 .options-2 .option i, .internal-main .products .filters .parameters .select-menu-2 .options-2 .option-2 i {
               font-size: 25px;
               margin-top: 5px;
               margin-right: 12px;
               text-align: center; }
-            .internal-main .products .filters .select-menu .options .option .option-text {
+            .internal-main .products .filters .parameters .select-menu .options .option .option-text, .internal-main .products .filters .parameters .select-menu-2 .options .option .option-text, .internal-main .products .filters .parameters .select-menu-2 .options-2 .option .option-text, .internal-main .products .filters .parameters .select-menu-2 .options-2 .option-2 .option-text, .internal-main .products .filters .parameters .select-menu .options .option .select-menu-2 .options-2 .option-text-2, .internal-main .products .filters .parameters .select-menu-2 .options .option .options-2 .option-text-2, .internal-main .products .filters .parameters .select-menu-2 .options-2 .option .option-text-2, .internal-main .products .filters .parameters .select-menu-2 .options-2 .option-2 .option-text-2 {
               font-family: IBM;
               font-size: 1.7rem;
               font-weight: bold;

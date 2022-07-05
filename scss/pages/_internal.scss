@@ -133,77 +133,108 @@
                 }
             }
 
-            .select-menu {
-                width: 240px;
-                margin: 20px auto;
-
-                &.active .options {
-                    display: block;
-                }
-
-                &.active .select-btn i {
-                    transform: rotate(-180deg);
-                }
-
-                .select-btn {
-                    display: flex;
-                    height: 30px;
-                    background-color: rgba(0, 0, 0, .08);
-                    color: black;
-                    padding: 20px;
-                    font-size: 1.7rem;
-                    font-weight: bold;
-                    border-radius: 8px;
-                    align-items: center;
-                    justify-content: space-between;
-                    cursor: pointer;
-                    box-shadow: 0 0 5px rgba(0, 0, 0, .1);
-
-                    span {
-                        font-family: IBM;
+            .parameters{
+                .select-menu {
+                    width: 240px;
+                    margin: 20px auto;
+    
+                    &.active .options {
+                        display: block;
                     }
-
-                    i {
-                        font-size: 2.5rem;
-                        transition: .3s;
+    
+                    &.active .select-btn i {
+                        transform: rotate(-180deg);
                     }
-                }
-
-                .options {
-                    position: relative;
-                    padding: 5px;
-                    margin-top: 5px;
-                    border-radius: 8px;
-                    background-color: rgba(0, 0, 0, .08);
-                    box-shadow: 0 0 3px rgba(0, 0, 0, .1);
-                    display: none;
-
-                    .option {
+    
+                    .select-btn {
                         display: flex;
-                        height: 32px;
-                        cursor: pointer;
+                        height: 30px;
+                        background-color: rgba(0, 0, 0, .08);
+                        color: black;
+                        padding: 20px;
+                        font-size: 1.7rem;
+                        font-weight: bold;
+                        border-radius: 8px;
                         align-items: center;
                         justify-content: space-between;
-                        padding: 0 10px;
-                        margin: 10px 0px;
-                        border-radius: 5px;
-
-                        &:hover {
-                            background-color: rgba(0, 0, 0, .05);
-                        }
-
-                        i {
-                            font-size: 25px;
-                            margin-top: 5px;
-                            margin-right: 12px;
-                            text-align: center;
-                        }
-
-                        .option-text {
+                        cursor: pointer;
+                        box-shadow: 0 0 5px rgba(0, 0, 0, .1);
+    
+                        span {
                             font-family: IBM;
-                            font-size: 1.7rem;
-                            font-weight: bold;
-                            color: black;
+                        }
+    
+                        i {
+                            font-size: 2.5rem;
+                            transition: .3s;
+                        }
+                    }
+    
+                    .options {
+                        position: relative;
+                        padding: 5px;
+                        margin-top: 5px;
+                        border-radius: 8px;
+                        background-color: rgba(0, 0, 0, .08);
+                        box-shadow: 0 0 3px rgba(0, 0, 0, .1);
+                        transition: 0.3s;
+                        display: none;
+    
+                        .option {
+                            display: flex;
+                            height: 32px;
+                            cursor: pointer;
+                            align-items: center;
+                            justify-content: space-between;
+                            padding: 0 10px;
+                            margin: 10px 0px;
+                            border-radius: 5px;
+    
+                            &:hover {
+                                background-color: rgba(0, 0, 0, .05);
+                            }
+    
+                            i {
+                                font-size: 25px;
+                                margin-top: 5px;
+                                margin-right: 12px;
+                                text-align: center;
+                            }
+    
+                            .option-text {
+                                font-family: IBM;
+                                font-size: 1.7rem;
+                                font-weight: bold;
+                                color: black;
+                            }
+                        }
+                    }
+                }
+
+                .select-menu-2{
+                    @extend .select-menu;
+
+                    &.active .options-2{
+                        @extend .select-menu;
+                    }
+
+                    &.active .select-btn-2 i{
+                        @extend .select-menu;
+                    }
+
+                    .select-btn-2{
+                        @extend .select-btn;
+                    }
+
+                    .options-2{
+                        @extend .options;
+
+                        .option-2{
+                            @extend .option;
+                        }
+
+                        .option-text-2{
+                            @extend .option-text;
                         }
                     }
                 }
