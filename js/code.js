@@ -115,3 +115,13 @@ options_2.forEach(option =>{
         optionMenu_2.classList.remove('active');
     })
 })
+
+// Cards Videos //
+
+const clip = document.querySelectorAll('.clip');
+for (let i = 0; i<clip.length; i++){
+    clip[i].addEventListener('mouseenter', 
+    function(e){
+        clip[i].play()
+    })
+}
