@@ -132,48 +132,53 @@
             <section class="welcome">
                 <span class="section"><a href="">Productos</a><a href="">Edición de video</a></span>
                 <h2>Material ilimitado para tus proyectos</h2>
-                <p>Encuentra los <b>mejores recursos</b> de edición de video del mercado a precios realmente increíbles. </p>
+                <p>Encuentra los <b>mejores recursos</b> de edición de video del mercado a precios realmente increíbles.
+                </p>
             </section>
-            <section class="products">
-                <div class="filters">
+            <section class="products" id="products">
+                <div class="filters" id="filters">
                     <div class="filters-text">
                         <i class='bx bx-menu-alt-left'></i>
                         <h6>Filtros</h6>
                     </div>
 
-                    <div class="checkboxes">
-                        <div class="categories">
-                            <div class="categories-checkbox">
+                    <div class="checkboxes" id="checkbox">
+                        <div class="category category_list">
+                            <div class="category-checkbox category_item">
                                 <input type="checkbox" name="intros" id="intros">
-                                <label for="intros">Intros</label>
+                                <label for="intros" category="intros">Intros</label>
                             </div>
-                            <div class="categories-checkbox">
+                            <div class="category-checkbox category_item">
                                 <input type="checkbox" name="titulos" id="titulos">
-                                <label for="titulos">Títulos</label>
+                                <label for="titulos" category="titulos">Títulos</label>
                             </div>
-                            <div class="categories-checkbox">
+                            <div class="category-checkbox category_item">
                                 <input type="checkbox" name="logos" id="logos">
-                                <label for="logos">Logos</label>
+                                <label for="logos" category="logos">Logos</label>
                             </div>
-                            <div class="categories-checkbox">
+                            <div class="category-checkbox category_item">
+                                <input type="checkbox" name="luts" id="luts">
+                                <label for="luts" category="luts">Lut's</label>
+                            </div>
+                            <div class="category-checkbox category_item">
                                 <input type="checkbox" name="photos-videos" id="photos_videos">
-                                <label for="photos_videos">Fotos/Vídeos</label>
+                                <label for="photos_videos" category="photos-videos">Fotos/Vídeos</label>
                             </div>
-                            <div class="categories-checkbox">
+                            <div class="category-checkbox category_item">
                                 <input type="checkbox" name="transitions" id="transitions">
-                                <label for="transitions">Transiciones</label>
+                                <label for="transitions" category="transitions">Transiciones</label>
                             </div>
-                            <div class="categories-checkbox">
+                            <div class="category-checkbox category_item">
                                 <input type="checkbox" name="motion-graphic" id="motion-graphic">
-                                <label for="motion-graphic">Motion Graphics</label>
+                                <label for="motion-graphic"  category="motion-graphics">Motion Graphics</label>
                             </div>
-                            <div class="categories-checkbox">
+                            <div class="category-checkbox category_item">
                                 <input type="checkbox" name="Slideshows" id="Slideshows">
-                                <label for="Slideshows">Slideshows</label>
+                                <label for="Slideshows" category="slideshows">Slideshows</label>
                             </div>
-                            <div class="categories-checkbox">
+                            <div class="category-checkbox category_item">
                                 <input type="checkbox" name="lowerthirds" id="lowerthirds">
-                                <label for="lowerthirds">Lower Thirds</label>
+                                <label for="lowerthirds" category="lowerthirds">Lower Thirds</label>
                             </div>
                         </div>
                     </div>
@@ -186,7 +191,7 @@
                                 </span>
                                 <i class="bx bx-chevron-down"></i>
                             </div>
-    
+
                             <ul class="options">
                                 <li class="option">
                                     <i class='bx bx-video-recording'></i>
@@ -210,14 +215,14 @@
                                 </span>
                                 <i class="bx bx-chevron-down"></i>
                             </div>
-    
+
                             <ul class="options-2">
                                 <li class="option-2">
                                     <i class='bx bx-mobile'></i>
                                     <span class="option-text-2">Vertical</span>
                                 </li>
                                 <li class="option-2">
-                                    <i class='bx bx-mobile-landscape' ></i>
+                                    <i class='bx bx-mobile-landscape'></i>
                                     <span class="option-text-2">Horizontal</span>
                                 </li>
                             </ul>
@@ -225,11 +230,103 @@
 
 
                     </div>
-
                 </div>
-                <div class="products-cards">
-                    <div class="card">
-                        
+
+                <div class="products-cards products-list" id="cards">
+                    <div class="cards luts" category="luts">
+                        <video class="video" poster="../assets/img/cards/cinematic-luts.PNG" controls loop muted>
+                            <source class="video" src="../assets/videos/productos/cinematic-luts.mp4" type="video/mp4">
+                        </video>
+                        <div class="cards-info">
+                            <div class="text">
+                                <h4>Cinematic Luts and Lens vol. I</h4>
+                                <h6>by <span>Random</span></h6>
+                            </div>
+                            <div class="icons">
+                                <i class='bx bx-cart-add'></i>
+                                <i class='bx bxs-info-circle' ></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cards motion-graphics" category="motion-graphics">
+                        <video class="video" poster="../assets/img/cards/astra-space.jpg" controls loop muted>
+                            <source class="video" src="../assets/videos/productos/astra-space.mp4" type="video/mp4">
+                        </video>
+                        <div class="cards-info">
+                            <div class="text">
+                                <h4>Astra Space</h4>
+                                <h6>by <span>Random</span></h6>
+                            </div>
+                            <div class="icons">
+                                <i class='bx bx-cart-add'></i>
+                                <i class='bx bxs-info-circle' ></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cards transitions" category="transitions">
+                        <video class="video" poster="../assets/img/cards/film-transition.PNG" controls loop muted>
+                            <source class="video" src="../assets/videos/productos/film-transition.mp4" type="video/mp4">
+                        </video>
+                        <div class="cards-info">
+                            <div class="text">
+                                <h4>Film Transition</h4>
+                                <h6>by <span>Random</span></h6>
+                            </div>
+                            <div class="icons">
+                                <i class='bx bx-cart-add'></i>
+                                <i class='bx bxs-info-circle' ></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cards slideshows" category="slideshows">
+                        <video class="video" poster="../assets/img/cards/cybercity.PNG" controls loop muted>
+                            <source class="video" src="../assets/videos/productos/cyber-city.mp4" type="video/mp4">
+                        </video>
+                        <div class="cards-info">
+                            <div class="text">
+                                <h4>Cybercity</h4>
+                                <h6>by <span>Random</span></h6>
+                            </div>
+                            <div class="icons">
+                                <i class='bx bx-cart-add'></i>
+                                <i class='bx bxs-info-circle' ></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cards lowerthirds" category="lowerthirds">
+                        <video class="video" poster="../assets/img/cards/animated-lowerthirds-collection-2.PNG" controls loop muted>
+                            <source class="video" src="../assets/videos/productos/animated-lowerthird-collection-2.mp4" type="video/mp4">
+                        </video>
+                        <div class="cards-info">
+                            <div class="text">
+                                <h4>Animated Lower Third (Collection 2)</h4>
+                                <h6>by <span>Random</span></h6>
+                            </div>
+                            <div class="icons">
+                                <i class='bx bx-cart-add'></i>
+                                <i class='bx bxs-info-circle' ></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cards motion-graphics" category="motion-graphics">
+                        <video class="video" poster="../assets/img/cards/800-animated-elements-bundle.PNG" controls loop muted>
+                            <source class="video" src="../assets/videos/productos/Motion Graphics Bundle 800.mp4" type="video/mp4">
+                        </video>
+                        <div class="cards-info">
+                            <div class="text">
+                                <h4>Motion Graphics Bundle 800</h4>
+                                <h6>by <span>Random</span></h6>
+                            </div>
+                            <div class="icons">
+                                <i class='bx bx-cart-add'></i>
+                                <i class='bx bxs-info-circle' ></i>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>

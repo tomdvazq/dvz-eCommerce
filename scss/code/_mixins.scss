@@ -1,70 +1,124 @@
 // Media Querie // 
 
-@mixin mQuerie($size){
-    @if $size==xl{
-        @media (max-width: 1470px){
+@mixin mQuerie($size) {
+    @if $size==xl {
+        @media (max-width: 1470px) {
             @content ;
         }
-    } @else if $size==l{
-        @media (max-width: 1250px){
+    }
+
+    @else if $size==l {
+        @media (max-width: 1250px) {
             @content;
         }
-    } @else if $size==m{
-        @media (max-width: 1030px){
+    }
+
+    @else if $size==m {
+        @media (max-width: 1030px) {
             @content;
         }
-    } @else if $size==s{
-        @media (max-width: 530px){
+    }
+
+    @else if $size==s {
+        @media (max-width: 530px) {
             @content;
         }
-    } @else if $size==mobile{
-        @media (max-width: 420px){
+    }
+
+    @else if $size==mobile {
+        @media (max-width: 420px) {
             @content;
         }
-    } @else if $size==products{
-        @media (max-width: 1350px){
+    }
+
+    @else if $size==products {
+        @media (max-width: 1350px) {
             @content ;
         }
-    } @else if $size==tablet{
-        @media (max-width: 810px){
+    }
+
+    @else if $size==tablet {
+        @media (max-width: 810px) {
             @content ;
         }
-    } @else if $size==tabletM{
-        @media (max-width: 760px){
+    }
+
+    @else if $size==tabletM {
+        @media (max-width: 760px) {
             @content ;
         }
-    } @else if $size==preMobile{
-        @media (max-width: 450px){
-            @content ;
-        } 
-    } @else if $size==clients{
-        @media (max-width: 1110px){
+    }
+
+    @else if $size==preMobile {
+        @media (max-width: 450px) {
             @content ;
         }
-    } @else if $size ==ss{
-        @media (max-width: 360px){
+    }
+
+    @else if $size==clients {
+        @media (max-width: 1110px) {
+            @content ;
+        }
+    }
+
+    @else if $size==ss {
+        @media (max-width: 360px) {
             @content;
         }
-    } @else if $size==tablethw{
-        @media (max-width: 720px){
+    }
+
+    @else if $size==tablethw {
+        @media (max-width: 720px) {
             @content;
         }
-    } @else if $size==footertablet{
-        @media (max-width: 855px){
+    }
+
+    @else if $size==footertablet {
+        @media (max-width: 855px) {
             @content;
         }
-    } @else if $size==footermobile{
-        @media (max-width: 720px){
+    }
+
+    @else if $size==footermobile {
+        @media (max-width: 720px) {
             @content;
         }
-    } @else if $size==gridmobile{
-        @media (max-width: 385px){
+    }
+
+    @else if $size==gridmobile {
+        @media (max-width: 385px) {
             @content;
         }
     }
 }
 
-@mixin flex($fd, $jc, $ai){
+@mixin products($size) {
+    @if $size==xxl {
+        @media (max-width: 1615px) {
+            @content;
+        }
+    }
+
+    @else if $size==xl {
+        @media (max-width: 1485px) {
+            @content;
+        }
+    }
+
+    @else if $size==l {
+        @media (max-width: 1320px) {
+            @content;
+        }
+    }
+
+    @else if $size==m {
+        @media (max-width: 1165px) {
+            @content;
+        }
+    }
+}
+
+@mixin flex($fd, $jc, $ai) {
     display: flex;
     flex-direction: $fd;
     justify-content: $jc;

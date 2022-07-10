@@ -115,3 +115,13 @@ options_2.forEach(option =>{
         optionMenu_2.classList.remove('active');
     })
 })
+
+// Filters //
+
+$(document).ready(function() {
+    // CALL CATEGORY ITEM //
+    $('.category-item-child').click(function(){
+        let category = $(this).attr('category');
+        console.log(category)
+    })
+})
