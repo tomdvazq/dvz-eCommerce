@@ -1,5 +1,6 @@
 * {
     margin: 0;
+    padding: 0;
     top: 0;
     box-sizing: border-box;
     font-family: 'Roboto Flex', IBM, 'sens-serif';
@@ -19,7 +20,7 @@ a {
 }
 
 li {
-    list-style: none;
+    list-style-type: none;
 }
 
 body::-webkit-scrollbar{
