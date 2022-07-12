@@ -132,78 +132,137 @@
             <section class="welcome">
                 <span class="section"><a href="">Productos</a><a href="">Edición de video</a></span>
                 <h2>Material ilimitado para tus proyectos</h2>
-                <p>Encuentra los <b>mejores recursos</b> de edición de video del mercado a precios realmente increíbles. </p>
+                <p>Encuentra los <b>mejores recursos</b> de edición de video del mercado a precios realmente increíbles.
+                </p>
             </section>
-            <section class="category-head">
-                <ul>
-                    <div class="category-title" id="all">
-                        <li>Todos los productos</li>
-                    </div>
-                    <div class="category-title" id="intros">
-                        <li>Intros</li>
-                    </div>
-                    <div class="category-title" id="titulos">
-                        <li>Títulos</li>
-                    </div>
-                    <div class="category-title" id="luts">
-                        <li>Luts</li>
-                    </div>
-                    <div class="category-title" id="fotos_videos">
-                        <li>Fotos/Vídeos</li>
-                    </div>
-                    <div class="category-title" id="transiciones">
-                        <li>Transiciones</li>
-                    </div>
-                    <div class="category-title" id="motion-graphics">
-                        <li>Motion Graphics</li>
-                    </div>
-                    <div class="category-title" id="slideshows">
-                        <li>Slideshows</li>
-                    </div>
-                    <div class="category-title" id="lower_thirds">
-                        <li>Lower Thirds</li>
-                    </div>
-                </ul>
-                <div class="post-collect">
-                    <div class="post-main-container">
-                        <!-- Inicio -->
-                        <div class="all motion-graphics">
-                            <div class="post-img">
-                                <img src="../assets/img/cards/cybercity.PNG" alt="cibercity">
-                                <span class="category-name">Motion Graphics</span>
+            <section class="products">
+                <input type="radio" name="categories" id="all" value="all">
+                <input type="radio" name="categories" id="intros" value="intros">
+                <input type="radio" name="categories" id="titulos" value="titulos">
+                <input type="radio" name="categories" id="luts" value="luts">
+                <input type="radio" name="categories" id="fotos_videos" value="fotos_videos">
+                <input type="radio" name="categories" id="transiciones" value="transiciones">
+                <input type="radio" name="categories" id="bundles" value="bundles">
+                <input type="radio" name="categories" id="motion_graphics" value="motion_graphics">
+                <input type="radio" name="categories" id="slide_shows" value="slide_shows">
+                <input type="radio" name="categories" id="lower_thirds" value="lower_thirds">
+
+                <div class="container-category">
+                    <h6>Filtros <i class='bx bx-menu-alt-left'></i></h6>
+                    <label for="all">Todos los productos</label>
+                    <label for="intros">Intros</label>
+                    <label for="titulos">Títulos</label>
+                    <label for="luts">Luts</label>
+                    <label for="fotos_videos">Fotos/Vídeos</label>
+                    <label for="transiciones">Transiciones</label>
+                    <label for="bundles">Bundles</label>
+                    <label for="motion_graphics">Motion Graphics</label>
+                    <label for="slide_shows">Slideshows</label>
+                    <label for="lower_thirds">Lower Thirds</label>
+                </div>
+
+                <div class="container-post">
+                    <div class="posts">
+                        <div class="post" data-category="slide_shows">
+                            <div class="ctn-video">
+                                <video controls>
+                                    <source src="../assets/videos/productos/astra-space.mp4" type="video/mp4">
+                                </video>
                             </div>
-                            <div class="post-content">
-                                <span>11 de Julio, 2022</span>
+                            <div class="ctn-info">
+                                <div class="info">
+                                    <h2>Astra Space</h2>
+                                    <p>designed by <b>Random</b></p>
+                                </div>
+                                <div class="icons">
+                                    <i class='bx bx-info-circle'></i>
+                                    <i class='bx bx-cart-add'></i>
+                                </div>
                             </div>
-                            <h2>CiberCity</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt earum nobis soluta quaerat tempore nisi ab ipsum voluptate odio rerum!</p>
-                            <button type="button" class="buy-btn">Agregar al carrito</button>
                         </div>
-                        <div class="all luts">
-                            <div class="post-img">
-                                <img src="../assets/img/cards/cinematic-luts.PNG" alt="cinematic-luts">
-                                <span class="category-name">Luts</span>
+                        <div class="post" data-category="luts">
+                            <div class="ctn-video">
+                                <video controls>
+                                    <source src="../assets/videos/productos/cinematic-luts.mp4" type="video/mp4">
+                                </video>
                             </div>
-                            <div class="post-content">
-                                <span>11 de Julio, 2022</span>
+                            <div class="ctn-info">
+                                <div class="info">
+                                    <h2>Cinematic Luts</h2>
+                                    <p>designed by <b>Random</b></p>
+                                </div>
+                                <div class="icons">
+                                    <i class='bx bx-info-circle'></i>
+                                    <i class='bx bx-cart-add'></i>
+                                </div>
                             </div>
-                            <h2>Cinematic Luts</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt earum nobis soluta quaerat tempore nisi ab ipsum voluptate odio rerum!</p>
-                            <button type="button" class="buy-btn">Agregar al carrito</button>
                         </div>
-                        <div class="all transiciones">
-                            <div class="post-img">
-                                <img src="../assets/img/cards/astra-space.jpg" alt="astra-space">
-                                <span class="category-name">Transiciones</span>
+                        <div class="post" data-category="transiciones">
+                            <div class="ctn-video">
+                                <iframe src="https://drive.google.com/file/d/1Udv9znHbD6BsVpO2vSN5WGgaoeLbgjXK/preview"></iframe>
                             </div>
-                            <div class="post-content">
-                                <span>11 de Julio, 2022</span>
+                            <div class="ctn-info">
+                                <div class="info">
+                                    <h2>Film Transition</h2>
+                                    <p>designed by <b>Random</b></p>
+                                </div>
+                                <div class="icons">
+                                    <i class='bx bx-info-circle'></i>
+                                    <i class='bx bx-cart-add'></i>
+                                </div>
                             </div>
-                            <h2>Astra Space</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt earum nobis soluta quaerat tempore nisi ab ipsum voluptate odio rerum!</p>
-                            <button type="button" class="buy-btn">Agregar al carrito</button>
                         </div>
-                        <!-- Fin -->
+                        <div class="post" data-category="motion_graphics">
+                            <div class="ctn-video">
+                                <video controls>
+                                    <source src="../assets/videos/productos/Motion Graphics Bundle 800.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="ctn-info">
+                                <div class="info">
+                                    <h2>Motion Graphics Bundle</h2>
+                                    <p>designed by <b>Random</b></p>
+                                </div>
+                                <div class="icons">
+                                    <i class='bx bx-info-circle'></i>
+                                    <i class='bx bx-cart-add'></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post" data-category="lower_thirds">
+                            <div class="ctn-video">
+                                <video controls>
+                                    <source src="../assets/videos/productos/animated-lowerthird-collection-2.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="ctn-info">
+                                <div class="info">
+                                    <h2>Lowerthird Collection 2</h2>
+                                    <p>designed by <b>Random</b></p>
+                                </div>
+                                <div class="icons">
+                                    <i class='bx bx-info-circle'></i>
+                                    <i class='bx bx-cart-add'></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post" data-category="slide_shows">
+                            <div class="ctn-video">
+                                <video controls>
+                                    <source src="../assets/videos/productos/cyber-city.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="ctn-info">
+                                <div class="info">
+                                    <h2>Cybercity</h2>
+                                    <p>designed by <b>Random</b></p>
+                                </div>
+                                <div class="icons">
+                                    <i class='bx bx-info-circle'></i>
+                                    <i class='bx bx-cart-add'></i>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
